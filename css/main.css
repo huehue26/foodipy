@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #c6d9e2;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+}
+
+.nav-bar .nav-bar-logo-image {
+  font-size: 30px;
+  font-family: cursive;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+  color: #d81962;
+}
+
+.nav-bar .nav-bar-category ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.nav-bar .nav-bar-category ul li {
+  text-decoration: none;
+  padding-right: 20px;
+  font-size: 16px;
+}
+
+.nav-bar .nav-bar-search .nav-bar-search-input {
+  height: 30px;
+  width: 400px;
+  padding-left: 12px;
+}
+
+.nav-bar .nav-bar-pwg ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.nav-bar .nav-bar-pwg ul li {
+  text-decoration: none;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  align-items: center;
+}
+
+.nav-bar .nav-bar-pwg ul li span {
+  padding-top: 6px;
+}
+
+.nav-bar .nav-bar-pwg ul li .wishlist:hover,
+.nav-bar .nav-bar-pwg ul li .cart:hover,
+.nav-bar .nav-bar-pwg ul li .profile:hover {
+  cursor: pointer;
+  color: #d81962;
+}
