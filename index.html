@@ -13,31 +13,102 @@
 </head>
 
 <body>
-    <div class="nav-bar">
-        <div class="nav-bar-logo">
-            <!-- <img src="./img/nav-bar-logo.png" alt="Logo" class="nav-bar-logo-image"> -->
-            <p class="nav-bar-logo-image">Shopio</p>
+    <main class="home-page">
+        <div class="video-container">
+            <div class="color-overlay"></div>
+            <video autoplay loop muted id="home-video">
+                <source src="./vid/My Movie 1.mp4" type="video/mp4">
+            </video>
         </div>
-        <div class="nav-bar-category">
-            <ul>
-                <li>MEN</li>
-                <li>WOMEN</li>
-                <li>KIDS</li>
-                <li>LIVING</li>
-                <li>BEAUTY</li>
-            </ul>
+        <div class="nav-bar">
+            <div>
+                <h1 class="logo">Bakify</h1>
+            </div>
+            <div class="headings">
+                <a href="#">
+                    <p class="sub-headings">Our Bakery</p>
+                </a>
+                <a href="#">
+                    <p class="sub-headings">Order</p>
+                </a>
+                <a href="#">
+                    <p class="sub-headings">Services</p>
+                </a>
+                <a href="#">
+                    <p class="sub-headings">Contact</p>
+                </a>
+                <button id="login-button">Log In</button>
+                <button id="signup-button">Sign Up</button>
+            </div>
         </div>
-        <div class="nav-bar-search">
-            <input type="text" class="nav-bar-search-input" placeholder="Search for products brand and more">
+        <div class="content">
+            <p>Daily Fresh</p>
+            <p>Baked Goods</p>
+            <button>Order Now</button>
         </div>
-        <div class="nav-bar-pwg">
-            <ul>
-                <li><i class="fas fa-heart wishlist"></i><span>Wishlist</span></li>
-                <li><i class="fas fa-shopping-cart cart"></i><span>Cart</span></li>
-                <li><i class="fas fa-user profile"></i><span>Profile</span></li>
-            </ul>
+        <div id="signup">
+            <div class="container">
+                <div class="heading">
+                    <div class="sub-heading">Sign Up</div>
+                    <div>
+                        <button id="close-signup"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div>
+                    <input id="name-input" type="text" class="input" placeholder="Full Name">
+                </div>
+                <div>
+                    <input id="email-input" type="text" class="input" placeholder="Email">
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" id="checkbox">
+                    <span class="check-box-message">I agree to Bakify's Terms of Service, Privacy Policy and Content
+                        Policies</span>
+                </div>
+                <div>
+                    <button class="submit">Create Account</button>
+                </div>
+                <div style="font-size: 20px;">
+                    or
+                </div>
+                <div>
+                    <button class="google"><i class="fab fa-google"></i>&emsp;Continue with Google</button>
+                </div>
+                <div class="have-acc">
+                    Already Have a Account ? Log In
+                </div>
+            </div>
         </div>
-    </div>
+        <div id="login">
+            <div class="container">
+                <div class="heading">
+                    <div class="sub-heading">Log in</div>
+                    <div>
+                        <button id="close-login"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div>
+                    <input id="phone-input" type="number" class="input" placeholder="Phone Number">
+                </div>
+                <div>
+                    <input id="password-input" type="text" class="input" placeholder="Password">
+                </div>
+                <div>
+                    <button class="submit">Log In</button>
+                </div>
+                <div style="font-size: 20px;">
+                    or
+                </div>
+                <div>
+                    <button class="google"><i class="fab fa-google"></i>&emsp;Continue with Google</button>
+                </div>
+                <div class="have-acc">
+                    New to Bakify? Create Account
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/logic.js"></script>
 </body>
 
 </html>

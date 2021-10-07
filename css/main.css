@@ -1,74 +1,246 @@
 * {
   box-sizing: border-box;
-}
+  padding: 0px;
+  margin: 0px; }
 
 body {
-  padding: 0px;
-  margin: 0px;
-  background-color: #c6d9e2;
-}
+  background-color: #f3f5f7;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
 
-.nav-bar {
-  display: flex;
-  align-items: center;
-  position: fixed;
+.home-page {
+  height: 100vh;
   width: 100%;
-  background-color: white;
-  align-items: center;
-  justify-content: space-around;
-  color: black;
-}
-
-.nav-bar .nav-bar-logo-image {
-  font-size: 30px;
-  font-family: cursive;
-  font-weight: bolder;
-  align-items: center;
-  justify-content: center;
-  color: #d81962;
-}
-
-.nav-bar .nav-bar-category ul {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-}
-
-.nav-bar .nav-bar-category ul li {
-  text-decoration: none;
-  padding-right: 20px;
-  font-size: 16px;
-}
-
-.nav-bar .nav-bar-search .nav-bar-search-input {
-  height: 30px;
-  width: 400px;
-  padding-left: 12px;
-}
-
-.nav-bar .nav-bar-pwg ul {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-}
-
-.nav-bar .nav-bar-pwg ul li {
-  text-decoration: none;
-  padding: 5px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  align-items: center;
-}
-
-.nav-bar .nav-bar-pwg ul li span {
-  padding-top: 6px;
-}
-
-.nav-bar .nav-bar-pwg ul li .wishlist:hover,
-.nav-bar .nav-bar-pwg ul li .cart:hover,
-.nav-bar .nav-bar-pwg ul li .profile:hover {
-  cursor: pointer;
-  color: #d81962;
-}
+  overflow: hidden;
+  top: 0; }
+  .home-page .video-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    min-width: 100vw; }
+    .home-page .video-container .color-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #050505;
+      height: 100vh;
+      min-width: 100%;
+      opacity: 0.7;
+      z-index: 2; }
+  .home-page #home-video {
+    right: 0;
+    top: 0;
+    height: 100vh;
+    min-width: 100vw; }
+  .home-page .nav-bar {
+    position: absolute;
+    top: 0;
+    display: flex;
+    color: #fbf8f8;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 3; }
+    .home-page .nav-bar .logo {
+      font-family: cursive;
+      margin-left: 200px;
+      margin-right: 200px;
+      font-size: 40px; }
+    .home-page .nav-bar .headings {
+      display: flex;
+      font-size: 20px;
+      font-weight: normal; }
+      .home-page .nav-bar .headings a {
+        text-decoration: none;
+        color: white; }
+      .home-page .nav-bar .headings a:hover {
+        color: #e79544;
+        text-decoration: none; }
+      .home-page .nav-bar .headings .sub-headings {
+        padding-right: 50px; }
+      .home-page .nav-bar .headings #login-button, .home-page .nav-bar .headings #signup-button {
+        border: none;
+        background-color: transparent;
+        margin-right: 30px;
+        color: white;
+        font-size: 19px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: normal;
+        cursor: pointer; }
+      .home-page .nav-bar .headings #login-button:hover, .home-page .nav-bar .headings #signup-button:hover {
+        color: #e79544; }
+  .home-page .content {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #fbf8f8;
+    z-index: 3;
+    align-items: center;
+    justify-content: center; }
+    .home-page .content p {
+      font-size: 70px;
+      padding-bottom: 20px; }
+    .home-page .content button {
+      margin-top: 30px;
+      height: 50px;
+      width: 200px;
+      font-size: 20px;
+      border: none;
+      background-color: #e79544;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer; }
+    .home-page .content button:hover {
+      color: #e79544;
+      background-color: white; }
+  .home-page #signup {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(5, 5, 5, 0.7);
+    z-index: 4;
+    display: none; }
+    .home-page #signup .container {
+      height: 450px;
+      width: 450px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px; }
+      .home-page #signup .container div {
+        margin-bottom: 10px; }
+      .home-page #signup .container .heading {
+        font-size: 29px;
+        font-weight: 200;
+        flex: none;
+        display: flex;
+        align-items: center; }
+        .home-page #signup .container .heading .sub-heading {
+          margin-right: 250px; }
+        .home-page #signup .container .heading button {
+          width: 30px;
+          height: 30px;
+          font-size: 25px;
+          background-color: white;
+          border: none;
+          cursor: pointer; }
+        .home-page #signup .container .heading button:hover {
+          color: #e79544; }
+      .home-page #signup .container .input {
+        width: 370px;
+        height: 35px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-left: 9px;
+        font-size: 20px; }
+      .home-page #signup .container .check-box {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 20px; }
+        .home-page #signup .container .check-box input {
+          margin-right: 10px; }
+      .home-page #signup .container .submit {
+        width: 380px;
+        height: 40px;
+        font-size: 20px;
+        background-color: #e79544;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px; }
+      .home-page #signup .container .submit:hover {
+        background-color: #e6e4e4;
+        color: #e79544; }
+      .home-page #signup .container .google {
+        width: 380px;
+        height: 40px;
+        font-size: 20px;
+        background-color: #e79544;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px; }
+      .home-page #signup .container .google:hover {
+        background-color: #e6e4e4;
+        color: #e79544; }
+      .home-page #signup .container .have-acc {
+        margin-top: 10px;
+        font-size: 20px; }
+  .home-page #login {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(5, 5, 5, 0.7);
+    z-index: 4;
+    display: none; }
+    .home-page #login .container {
+      height: 450px;
+      width: 450px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px; }
+      .home-page #login .container div {
+        margin-bottom: 10px; }
+      .home-page #login .container .heading {
+        font-size: 29px;
+        font-weight: 200;
+        flex: none;
+        display: flex;
+        align-items: center; }
+        .home-page #login .container .heading .sub-heading {
+          margin-right: 250px; }
+        .home-page #login .container .heading button {
+          width: 30px;
+          height: 30px;
+          font-size: 25px;
+          background-color: white;
+          border: none;
+          cursor: pointer; }
+        .home-page #login .container .heading button:hover {
+          color: #e79544; }
+      .home-page #login .container .input {
+        width: 370px;
+        height: 35px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-left: 9px;
+        font-size: 20px; }
+      .home-page #login .container .google {
+        width: 380px;
+        height: 40px;
+        font-size: 20px;
+        background-color: #e79544;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px; }
+      .home-page #login .container .google:hover {
+        background-color: #e6e4e4;
+        color: #e79544; }
+      .home-page #login .container .submit {
+        width: 380px;
+        height: 40px;
+        font-size: 20px;
+        background-color: #e79544;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px; }
+      .home-page #login .container .submit:hover {
+        background-color: #e6e4e4;
+        color: #e79544; }
+      .home-page #login .container .have-acc {
+        margin-top: 10px;
+        font-size: 20px; }
