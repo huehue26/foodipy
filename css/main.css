@@ -373,7 +373,7 @@ body {
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 150vh;
+    height: 130vh;
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
@@ -488,6 +488,7 @@ body {
     box-shadow: none;
     border-radius: 30px;
     transition: all 0.4s ease;
+    cursor: pointer;
 }
 
 .order-right-h3:hover{
