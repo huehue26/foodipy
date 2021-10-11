@@ -368,7 +368,7 @@ body {
 
 .main-order-form{
     color: white;
-    background: url('/img/bac_bakery.jpg');
+    background: url('../img/bac_bakery.jpg');
     background-attachment: fixed !important;
     background-size:cover;
     background-position: center;
