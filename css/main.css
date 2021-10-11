@@ -1,4 +1,5 @@
 /* universal */
+
 * {
     box-sizing: border-box;
     padding: 0px;
@@ -17,7 +18,94 @@ body {
     top: 0;
 }
 
+
+/* preloader */
+
+
+/* preloader */
+
+html,
+body {
+    overflow: hidden;
+}
+
+.loading-div {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+    z-index: 10000000;
+}
+
+.loading-div .loading-animation {
+    z-index: 10000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.loading-div .loading-animation .bar {
+    width: 10px;
+    height: 70px;
+    background: #fff;
+    display: inline-block;
+    transform-origin: bottom center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    animation: loader 1.2s linear infinite;
+}
+
+.loading-div .loading-animation .bar1 {
+    animation-delay: 0.1s;
+}
+
+.loading-div .loading-animation .bar2 {
+    animation-delay: 0.2s;
+}
+
+.loading-div .loading-animation .bar3 {
+    animation-delay: 0.3s;
+}
+
+.loading-div .loading-animation .bar4 {
+    animation-delay: 0.4s;
+}
+
+.loading-div .loading-animation .bar5 {
+    animation-delay: 0.5s;
+}
+
+.loading-div .loading-animation .bar6 {
+    animation-delay: 0.6s;
+}
+
+.loading-div .loading-animation .bar7 {
+    animation-delay: 0.7s;
+}
+
+.loading-div .loading-animation .bar8 {
+    animation-delay: 0.8s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scaleY(0.1);
+    }
+    50% {
+        transform: scaleY(1);
+        background: #bb7c06;
+    }
+    100% {
+        transform: scaleY(0.1);
+        background: transparent;
+    }
+}
+
+
 /* background video */
+
 .home-page .video-container {
     position: absolute;
     top: 0;
@@ -44,7 +132,9 @@ body {
     min-width: 100vw;
 }
 
+
 /* nav bar */
+
 .home-page .nav-bar {
     position: absolute;
     top: 0;
@@ -99,7 +189,9 @@ body {
     color: #e79544;
 }
 
+
 /* middle text on backgroung image */
+
 .home-page .content {
     position: absolute;
     top: 35%;
@@ -134,7 +226,9 @@ body {
     background-color: white;
 }
 
+
 /* login box */
+
 .home-page #login {
     position: absolute;
     height: 100vh;
@@ -238,13 +332,15 @@ body {
     cursor: pointer;
     height: 30px;
     width: 150px;
-    background:transparent;
+    background: transparent;
     border: none;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
 /* signup box  */
+
 .home-page #signup {
     position: absolute;
     height: 100vh;
@@ -358,19 +454,20 @@ body {
     cursor: pointer;
     height: 30px;
     width: 80px;
-    background:transparent;
+    background: transparent;
     border: none;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
 /*  ORDER FORM */
 
-.main-order-form{
+.main-order-form {
     color: white;
     background: url('/img/bac_bakery.jpg');
     background-attachment: fixed !important;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 150vh;
@@ -378,10 +475,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
 
-.order-form-flex{
+.order-form-flex {
     flex-basis: 90%;
     margin: 0 auto;
     max-width: 930px;
@@ -394,15 +491,15 @@ body {
     gap: 100px;
 }
 
-.order-form-flex-left{
+.order-form-flex-left {
     flex-basis: 40%;
 }
 
-.order-form-flex-right{
+.order-form-flex-right {
     flex-basis: 40%;
 }
 
-.order-left-h4{
+.order-left-h4 {
     margin-bottom: 5px;
     font-size: 18px;
     font-weight: 700;
@@ -410,21 +507,21 @@ body {
     color: #fff;
 }
 
-.order-form-p{
+.order-form-p {
     margin-bottom: 20px;
     line-height: 1em;
     margin-top: 10px;
 }
 
-.order-para-num{
+.order-para-num {
     margin-top: 10px;
 }
 
-.order-form-icon{
+.order-form-icon {
     margin-right: 10px;
 }
 
-.order-left-child{
+.order-left-child {
     margin-bottom: 30px;
     margin-bottom: 20px;
     line-height: 1em;
@@ -433,20 +530,21 @@ body {
     color: #c7c7c7;
 }
 
+
 /* right  */
 
-.order-right-h3{
+.order-right-h3 {
     font-size: 35px;
-    font-family: BlinkMacSystemFont,"Lora", serif;
+    font-family: BlinkMacSystemFont, "Lora", serif;
 }
 
-.order-right-para{
+.order-right-para {
     margin-bottom: 15px;
     margin-top: 10px;
     font-size: 15px;
 }
 
-.order-form-label{
+.order-form-label {
     font-size: 15px;
     max-width: 100%;
     width: 100%;
@@ -454,7 +552,7 @@ body {
     color: #c7c7c7;
 }
 
-.order-form-input{
+.order-form-input {
     color: #fff;
     max-width: 100%;
     width: 100%;
@@ -469,15 +567,15 @@ body {
 }
 
 @media screen and (max-width:991px) {
-    .order-form-flex-right{
+    .order-form-flex-right {
         flex-basis: 100%;
     }
-    .order-form-flex-left{
+    .order-form-flex-left {
         flex-basis: 100%;
-    }    
+    }
 }
 
-#order-form-but{
+#order-form-but {
     display: inline-block;
     padding: 9px 60px 7px;
     line-height: 25px;
@@ -490,6 +588,24 @@ body {
     transition: all 0.4s ease;
 }
 
-.order-right-h3:hover{
+.order-right-h3:hover {
     text-shadow: 2px 2px #717978;
+}
+
+.error {
+    color: red;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+    background: transparent;
+    height: 30px;
+    width: 100%;
+}
+
+.success {
+    color: green;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+    background: transparent;
+    height: 30px;
+    width: 100%;
 }
