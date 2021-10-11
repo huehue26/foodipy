@@ -1,0 +1,391 @@
+*{
+    padding : 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: rgb(102, 72, 72);
+}
+h1
+{
+    display: block;
+}
+/* container */
+.skj_container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skj_container h1
+{
+    font-family: 'Ubuntu', sans-serif;
+    font: 3.4rem;
+    margin-top: 30px;
+}
+
+/* css for flavour */
+.skj_container .skj_flavour_1 h1
+{
+    font-family: 'Birthstone', cursive;
+    font-size: 3rem;
+    margin-top: -30px;
+}
+.skj_flavour
+{
+    display: flex;
+    height: 1400px;
+    /* background-color: rgb(102, 64, 64); */
+    flex-direction: column;
+    /* padding: 10px 5px; */
+    width: 100%;
+}
+
+.skj_flavour_1
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 8px;
+    height: 33%;
+    /* background-color: blue; */
+    align-items: center;
+    justify-content: center;
+}
+
+.skj_varites
+{
+    /* background-color: coral; */
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    margin: 5px 5px;
+    height: 80%;
+    /* flex-wrap: wrap; */
+}
+
+/* css for cards */
+.skj_cards
+{
+    position: relative;
+    width: 33%;
+    margin: 10px 4px;
+    /* background-color: powderblue; */
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skj_varites .skj_cards img
+{
+    position: relative;
+    width: 92%;
+    height: 92%;
+    transition-property: width , height , border-radius;
+    transition-duration: 2s , 2s , 2s;
+}
+.skj_varites .skj_cards:hover img
+{
+    /* transform: rotate(180deg); */
+    width: 107%;
+    height: 107%;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.skj_varites .skj_cards .skj_discription
+{
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    right: 25px;
+    bottom: 30px;
+    /* padding: 5px; */
+    color: blanchedalmond;
+    /* rgb(10 9 9 / 45%); */
+}
+
+.skj_cards .skj_discription::before
+{
+    content: "";
+    width: 97%;
+    height: 47%;
+    background-color: rgba(27, 25, 25, 0.7);
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    top: -10%;
+    opacity: 0;
+    margin: auto;
+    transition: all 1s;
+}
+.skj_cards .skj_discription::after
+{
+    content: "";
+    width: 97%;
+    height: 47%;
+    background-color: rgba(27, 25, 25, 0.801);
+    position: absolute; 
+    left: 3px;
+    right: 3px;
+    bottom: -10%;
+    opacity: 0;
+    margin: auto;
+    transition: all 1s;
+}
+
+.skj_cards:hover .skj_discription::before
+{
+    top: 3%;
+    opacity: 1;
+    /* width: 102%; */
+    cursor: pointer; 
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.skj_cards:hover .skj_discription::after
+{
+    bottom: 3.05%;
+    opacity: 1;
+    /* width: 102%; */
+    cursor: pointer; 
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.skj_content
+{
+    font-family: 'Birthstone', cursive;
+    font-size: 1.2rem;
+    position: absolute;
+    text-align: center;
+    padding: 40px 20px;
+    z-index: 10;
+    opacity: 0; 
+    transition: all 2s;
+    /* transform: rotate(90deg); */
+}
+
+.skj_cards:hover .skj_content
+{
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+
+/* css for types */
+.skj_types
+{
+    display: flex;
+    height: 1400px;
+    /* background-color: rgb(102, 64, 64); */
+    flex-direction: column;
+    /* padding: 10px 5px; */
+    width: 100%;
+}
+
+.skj_types_1
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 8px;
+    height: 33%;
+    /* background-color: blue; */
+    align-items: center;
+    justify-content: center;
+}
+.skj_container .skj_types_1 h1
+{
+    font-family: 'Birthstone', cursive;
+    font-size: 3rem;
+    margin-top: -30px;
+}
+
+.skj_symbol
+{
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+/* media query */
+
+@media(max-width:1100px)
+{
+    .skj_symbol
+    {
+        padding: 8px 10px;
+        margin: 0px 0px;
+    }
+}
+
+@media(max-width:950px)
+{
+    .skj_content
+    {
+        padding: 0px 0px;
+    }
+    .skj_flavour ,.skj_types
+    {
+        height: 1600px;
+    }
+
+    .skj_varites .skj_cards:hover img
+    {
+        /* transform: rotate(180deg); */
+        width: 102%;
+        height: 102%;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    .skj_cards:hover .skj_discription::before
+    {
+        top: 0%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .skj_cards:hover .skj_discription::after
+    {
+        bottom: 0%;
+        cursor: pointer; 
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .skj_cards .skj_discription::before
+    {
+        content: "";
+        width: 98%;
+        height: 50%;
+        position: absolute;
+        left: 1px;
+        right: 1px;
+        margin: auto;
+    }
+    .skj_cards .skj_discription::after
+    {
+        content: "";
+        width: 98%;
+        height: 50%;
+        position: absolute; 
+        left: 1px;
+        right: 1px;
+    }
+    .skj_varites .skj_cards .skj_discription
+    {
+        width: 100%;
+        top: 30px;
+        left: 0px;
+        right: 0px;
+        bottom: 30px;
+        padding: 25px 0px;
+        margin: auto;
+    }
+    .skj_varites .skj_cards img
+    {
+        height: 95%;
+        width: 99%;
+    }
+    .skj_cards
+    {
+        padding: 0px;
+        width: 35%;
+        margin: 5px 2px;
+    }
+    .skj_container .skj_flavour_1 h1
+    {
+        font-size: 3rem;
+        margin-top: -10px;
+    }
+
+    .skj_container .skj_types_1 h1
+    {
+        font-size: 3rem;
+        margin-top: -10px;
+    }
+    .skj_content
+    {
+        text-align: center;
+        margin: 3px auto;
+        height: 280px;
+        width: 100%;
+        margin: auto 0px;
+    }
+    .skj_symbol
+    {
+        padding: 0px 40px;
+        margin: 10px 0px;
+    }
+}
+
+@media(max-width:720px)
+{
+    .skj_varites
+    {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .skj_flavour , .skj_types
+    {
+        height: 3250px;
+    }
+
+    .skj_flavour_1 , .skj_types_1
+    {
+        height: 33%;
+        margin: 40px 0px;
+    }
+    .skj_cards
+    {
+        width: 90%;
+    }
+
+    .skj_varites .skj_cards img
+    {
+        height: 290px;
+    }
+    .skj_varites .skj_cards:hover img
+    {
+        width: 104%;
+        height: 108%;
+    }
+    .skj_cards
+    {
+        height: 33%;
+        width: 95%;
+    }
+    .skj_varites
+    {
+        height: 100%;
+    }
+    .skj_content
+    {
+        height: 97%;
+        padding: 2px 5px;
+    }
+    .skj_varites .skj_cards .skj_discription
+    {
+        padding: 15px 0px;
+    }
+    .skj_symbol
+    {
+        padding: 0px 10px;
+        margin: 10px 0px;
+    }
+}
+
+@media(max-width:380px)
+{
+    .skj_flavour , .skj_types
+    {
+        height: 3550px;
+    }
+    .skj_varites .skj_cards img
+    {
+        height: 310px;
+    }
+}
