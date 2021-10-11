@@ -1,5 +1,4 @@
 /* universal */
-
 * {
     box-sizing: border-box;
     padding: 0px;
@@ -11,88 +10,6 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-/* preloader */
-
-html,
-body {
-    overflow: hidden;
-}
-
-.loading-div {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    background-color: #000;
-    overflow: hidden;
-    z-index: 10000000;
-}
-
-.loading-div .loading-animation {
-    z-index: 10000000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-}
-
-.loading-div .loading-animation .bar {
-    width: 10px;
-    height: 70px;
-    background: #fff;
-    display: inline-block;
-    transform-origin: bottom center;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    animation: loader 1.2s linear infinite;
-}
-
-.loading-div .loading-animation .bar1 {
-    animation-delay: 0.1s;
-}
-
-.loading-div .loading-animation .bar2 {
-    animation-delay: 0.2s;
-}
-
-.loading-div .loading-animation .bar3 {
-    animation-delay: 0.3s;
-}
-
-.loading-div .loading-animation .bar4 {
-    animation-delay: 0.4s;
-}
-
-.loading-div .loading-animation .bar5 {
-    animation-delay: 0.5s;
-}
-
-.loading-div .loading-animation .bar6 {
-    animation-delay: 0.6s;
-}
-
-.loading-div .loading-animation .bar7 {
-    animation-delay: 0.7s;
-}
-
-.loading-div .loading-animation .bar8 {
-    animation-delay: 0.8s;
-}
-
-@keyframes loader {
-    0% {
-        transform: scaleY(0.1);
-    }
-    50% {
-        transform: scaleY(1);
-        background: #bb7c06;
-    }
-    100% {
-        transform: scaleY(0.1);
-        background: transparent;
-    }
-}
-
 .home-page {
     height: 100vh;
     width: 100%;
@@ -100,9 +17,7 @@ body {
     top: 0;
 }
 
-
 /* background video */
-
 .home-page .video-container {
     position: absolute;
     top: 0;
@@ -129,9 +44,7 @@ body {
     min-width: 100vw;
 }
 
-
 /* nav bar */
-
 .home-page .nav-bar {
     position: absolute;
     top: 0;
@@ -186,9 +99,7 @@ body {
     color: #e79544;
 }
 
-
 /* middle text on backgroung image */
-
 .home-page .content {
     position: absolute;
     top: 35%;
@@ -223,9 +134,7 @@ body {
     background-color: white;
 }
 
-
 /* login box */
-
 .home-page #login {
     position: absolute;
     height: 100vh;
@@ -329,15 +238,13 @@ body {
     cursor: pointer;
     height: 30px;
     width: 150px;
-    background: transparent;
+    background:transparent;
     border: none;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
 /* signup box  */
-
 .home-page #signup {
     position: absolute;
     height: 100vh;
@@ -451,8 +358,138 @@ body {
     cursor: pointer;
     height: 30px;
     width: 80px;
-    background: transparent;
+    background:transparent;
     border: none;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*  ORDER FORM */
+
+.main-order-form{
+    color: white;
+    background: url('/img/bac_bakery.jpg');
+    background-attachment: fixed !important;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+}
+
+.order-form-flex{
+    flex-basis: 90%;
+    margin: 0 auto;
+    max-width: 930px;
+    padding: 60px 80px;
+    background-color: rgba(34, 35, 40, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.order-form-flex-left{
+    flex-basis: 40%;
+}
+
+.order-form-flex-right{
+    flex-basis: 40%;
+}
+
+.order-left-h4{
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4em;
+    color: #fff;
+}
+
+.order-form-p{
+    margin-bottom: 20px;
+    line-height: 1em;
+    margin-top: 10px;
+}
+
+.order-para-num{
+    margin-top: 10px;
+}
+
+.order-form-icon{
+    margin-right: 10px;
+}
+
+.order-left-child{
+    margin-bottom: 30px;
+    margin-bottom: 20px;
+    line-height: 1em;
+    font-size: 14px;
+    font-weight: 400;
+    color: #c7c7c7;
+}
+
+/* right  */
+
+.order-right-h3{
+    font-size: 35px;
+    font-family: BlinkMacSystemFont,"Lora", serif;
+}
+
+.order-right-para{
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.order-form-label{
+    font-size: 15px;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #c7c7c7;
+}
+
+.order-form-input{
+    color: #fff;
+    max-width: 100%;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(235, 98, 98, 0.4);
+    box-shadow: 0 0px 10px rgba(134, 122, 122, 0.849);
+}
+
+@media screen and (max-width:991px) {
+    .order-form-flex-right{
+        flex-basis: 100%;
+    }
+    .order-form-flex-left{
+        flex-basis: 100%;
+    }    
+}
+
+#order-form-but{
+    display: inline-block;
+    padding: 9px 60px 7px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #cd9b33;
+    border: 2px solid #cd9b33;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+}
+
+.order-right-h3:hover{
+    text-shadow: 2px 2px #717978;
 }

@@ -15,22 +15,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    <style>
+        .error {
+            color: red;
+            padding: 5px;
+            margin: 5px 0 15px 0;
+            background: transparent;
+            height: 30px;
+            width: 100%;
+        }
+
+        .success {
+            color: green;
+            padding: 5px;
+            margin: 5px 0 15px 0;
+            background: transparent;
+            height: 30px;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Loading effect -->
-    <div class="loading-div">
-        <div class="loading-animation">
-            <div class="bar bar1"></div>
-            <div class="bar bar2"></div>
-            <div class="bar bar3"></div>
-            <div class="bar bar4"></div>
-            <div class="bar bar5"></div>
-            <div class="bar bar6"></div>
-            <div class="bar bar7"></div>
-            <div class="bar bar8"></div>
-        </div>
-    </div>
     <main class="home-page">
         <div class="video-container">
             <div class="color-overlay"></div>
@@ -126,6 +136,7 @@
             </div>
         </div>
     </main>
+    <script src="./js/logic.js"></script>
 
     <div class="skj_container">
 
@@ -540,15 +551,71 @@
         </div>
 
     </div>
-    <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        $(window).on("load", function () {
-            $('.loading-div').fadeOut('slow');
-            $(' html, body').css({ overflow: 'auto' });
-        });
-    </script>
-    <script src="./js/logic.js"></script>
+
+
+    <section>
+        <div class="main-order-form">
+            <div class="order-form-flex">
+                <div class="order-form-flex-left">
+                    <div class="order-left-child">
+                        <h4 class="order-left-h4">OFFICE IN NEW DELHI</h4>
+                        <p class="order-form-p">BASEMENT COMPANY, DWARKA</p>
+                        <p class="order-para"><span><i class="order-form-icon fa fa-envelope"></i>bake@bread.com</span>
+                        </p>
+                        <p class="order-para-num order-para"><span><i class="order-form-icon fa fa-phone-square"></i>
+                                +91
+                                8090706050</span>
+                        </p>
+                    </div>
+                    <div class="order-left-child">
+                        <h4 class="order-left-h4">OFFICE IN CHANDIGARAH</h4>
+                        <p class="order-form-p">BASEMENT COMPANY, INDUSTRIAL AREA Phase 1</p>
+                        <p class="order-para"><span><i
+                                    class="order-form-icon fa fa-envelope"></i>bake_chd@bread.com</span>
+                        </p>
+                        <p class="order-para-num order-para"><span><i class="order-form-icon fa fa-phone-square"></i>+91
+                                4090706050</span>
+                        </p>
+                    </div>
+                    <div class="order-left-child">
+                        <h4 class="order-left-h4">OFFICE IN KURUKSHETRA</h4>
+                        <p class="order-form-p">BASEMENT COMPANY, INDUSTRIAL AREA-II</p>
+                        <p class="order-para"><span><i
+                                    class="order-form-icon fa fa-envelope"></i>bake_kkr@bread.com</span>
+                        </p>
+                        <p class="order-para-num order-para"><span><i class="order-form-icon fa fa-phone-square"></i>+91
+                                8090006050</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="order-form-flex-right">
+                    <h3 class="order-right-h3">
+                        DELIVERY NOW
+                    </h3>
+                    <div class="order-right-para">
+                        Delivery free wafer fruitcake. Pastry toffee wafer gingerbread liquorice. Apple pie gingerbread
+                        caramels toffee tart bonbon.
+                    </div>
+                    <div class="order_form" id="odr_form">
+                        <form action="" class="order-input">
+                            <label class="order-form-label" for="#order-name">Name<br></label>
+                            <input class="order-form-input" type="text" name="" id="order-name" placeholder="Xavier">
+                            <label class="order-form-label" for="#order-email">E-mail <br></label>
+                            <input class="order-form-input" type="text" name="" id="order-email"
+                                placeholder="abc@gamil.com">
+                            <label class="order-form-label" for="#order-num">Mobile Number <br></label>
+                            <input class="order-form-input" type="text" name="" id="order-num" placeholder="9780906050">
+                            <input type="button" value="Submit" id="order-form-but">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/order_form.js"></script>
+    </section>
+
+
+
 </body>
 
 </html>
