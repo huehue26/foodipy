@@ -351,8 +351,8 @@ body {
 }
 
 .home-page #signup .container {
-    height: 450px;
-    width: 450px;
+    height: 470px;
+    width: 470px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -390,6 +390,12 @@ body {
     color: #e79544;
 }
 
+.home-page .container #signup-error {
+    margin-right: 210px;
+    color: red;
+    display: none;
+}
+
 .home-page #signup .container .input {
     width: 370px;
     height: 35px;
@@ -400,7 +406,7 @@ body {
 }
 
 .home-page #signup .container .check-box {
-    margin-left: 40px;
+    margin-left: 50px;
     margin-right: 40px;
     margin-bottom: 20px;
 }
@@ -409,7 +415,7 @@ body {
     margin-right: 10px;
 }
 
-.home-page #signup .container .submit {
+.home-page #signup .container #submit-signup {
     width: 380px;
     height: 40px;
     font-size: 20px;
@@ -420,7 +426,7 @@ body {
     border-radius: 5px;
 }
 
-.home-page #signup .container .submit:hover {
+.home-page #signup .container #submit-signup:hover {
     background-color: #e6e4e4;
     color: #e79544;
 }
