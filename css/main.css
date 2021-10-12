@@ -499,8 +499,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 95vh;
-    width: 100vw;
+    height: 115vh;
+    width: 98vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
