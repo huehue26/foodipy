@@ -8,6 +8,10 @@ body
     background-color: rgb(238, 234, 227);
 }
 
+a {
+    text-decoration: none;
+}
+
 .skj_container
 {
     display: flex;
@@ -22,9 +26,10 @@ body
     font-family: 'Ubuntu', sans-serif;
     font-size: 2.5em;
     display: block;
+    margin-top: 50px;
 } 
 
-.skj_container .skj_flavour_1 h1 , .skj_container .skj_types_1 h1
+.skj_container  h1 , .skj_container h1
 {
     font-family: 'Birthstone', cursive;
     font-size: 3rem;
@@ -42,20 +47,13 @@ body
 .skj_flavour , .skj_types
 {
     display: flex;
-    height: 1400px;
     flex-direction: column;
     width: 100%;
-    margin: 20px 0px;
 }
 
-.skj_flavour_1 , .skj_types_1
-{
+.region-heading {
     display: flex;
-    flex-direction: column;
-    margin: 0px 8px;
-    height: 33%;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .skj_varites 
@@ -74,7 +72,7 @@ body
     width: 24%;
     margin: 5px 4px;
     padding: 4px;
-    height: 90%;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,10 +99,8 @@ body
 .skj_cards .skj_discription
 {
     position: absolute;
-    top: 30px;
     left: 25px;
     right: 25px;
-    bottom: 30px;
     color: blanchedalmond;
 }
 
@@ -172,6 +168,10 @@ body
     transform: rotate(0deg);
 }
 
+.skj_content {
+    color: antiquewhite;
+}
+
 .skj_icons
 {
     color: blanchedalmond;
@@ -203,10 +203,6 @@ body
     .skj_varites
     {
         height: 100%;
-    }
-    .skj_flavour_1
-    {
-        height: 33%;
     }
     
     .skj_cards .skj_discription::before

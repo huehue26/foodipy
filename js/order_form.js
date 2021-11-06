@@ -24,7 +24,7 @@ Array.from(formInp).forEach(e => {
     e.addEventListener('key', (ele) => {
         console.log('lksdk');
         ele.target.style.boxShadow = '';
-        ele.target.style.border='';
+        ele.target.style.border = '';
     })
 })
 
