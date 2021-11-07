@@ -1,122 +1,125 @@
-const app_id="a93836d4"
-const app_key="3a8ea30a81648b6ae026c047d475d9c8"
-
+var current_food_id
 // indian food
-fetch(`https://api.edamam.com/search?app_id=${app_id}&app_key=${app_key}&q="indian"`)
-.then(res => res.json())
-.then(data =>{
-	const food=data.hits;
-	console.log(food);
-	for(var i=3;i<7;i++) {
-		const recepie=food[i].recipe;
-		console.log(recepie);
-		document.getElementById('indian_foods').innerHTML +=
-		`
-			<div class="skj_cards">
-				<img src="${recepie.image}" alt="">
-				<div class="skj_discription">
-					<a href="./food.html">
-						<div class="skj_content">
-							<h1>${recepie.label}</h1>
-							<div class="skj_symbol">
-								<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
-								<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
-							</div>
+fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`)
+	.then(res => res.json())
+	.then(data => {
+		const recipe = data.meals;
+		for (var i = 0; i < 4; i++) {
+			document.getElementById('indian_foods').innerHTML +=
+				`
+		<div class="skj_cards">
+			<img src="${recipe[i].strMealThumb}" alt="">
+			<div class="skj_discription">
+				<a href="./food.html">
+					<div class="skj_content">
+						<h1>${recipe[i].strMeal}</h1>
+						<div class="skj_symbol">
+							<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+							<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
 						</div>
-					</a>
-				</div>
+						<div style="display:none;">${recipe[i].idMeal}</div>
+					</div>
+				</a>
 			</div>
-		`
-	}
-});
-
-
-// chinese food
-fetch(`https://api.edamam.com/search?app_id=${app_id}&app_key=${app_key}&q="chinese"`)
-.then(res => res.json())
-.then(data =>{
-	const food=data.hits;
-	console.log(food);
-	for(var i=4;i<8;i++) {
-		const recepie=food[i].recipe;
-		console.log(recepie);
-		document.getElementById('chinese_foods').innerHTML +=
-		`
-			<div class="skj_cards">
-				<img src="${recepie.image}" alt="">
-				<div class="skj_discription">
-					<a href="./food.html">
-						<div class="skj_content">
-							<h1>${recepie.label}</h1>
-							<div class="skj_symbol">
-								<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
-								<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-		`
-	}
-});
-
+		</div>
+	`
+		}
+		$(".skj_content").click(function (e) {
+			current_food_id = e.target.lastElementChild.innerText;
+			sessionStorage.setItem('foodId', current_food_id);
+		});
+	});
 
 // italian food
-fetch(`https://api.edamam.com/search?app_id=${app_id}&app_key=${app_key}&q="italian"`)
-.then(res => res.json())
-.then(data =>{
-	const food=data.hits;
-	console.log(food);
-	for(var i=0;i<4;i++) {
-		const recepie=food[i].recipe;
-		console.log(recepie);
-		document.getElementById('italian_foods').innerHTML +=
-		`
-			<div class="skj_cards">
-				<img src="${recepie.image}" alt="">
-				<div class="skj_discription">
-					<a href="./food.html">
-						<div class="skj_content">
-							<h1>${recepie.label}</h1>
-							<div class="skj_symbol">
-								<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
-								<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
-							</div>
+fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian`)
+	.then(res => res.json())
+	.then(data => {
+		const recipe = data.meals;
+		for (var i = 0; i < 4; i++) {
+			document.getElementById('italian_foods').innerHTML +=
+				`
+		<div class="skj_cards">
+			<img src="${recipe[i].strMealThumb}" alt="">
+			<div class="skj_discription">
+				<a href="./food.html">
+					<div class="skj_content">
+						<h1>${recipe[i].strMeal}</h1>
+						<div class="skj_symbol">
+							<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+							<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
 						</div>
-					</a>
-				</div>
+						<div style="display:none;">${recipe[i].idMeal}</div>
+					</div>
+				</a>
 			</div>
-		`
-	}
-});
+		</div>
+	`
+		}
+		$(".skj_content").click(function (e) {
+			current_food_id = e.target.lastElementChild.innerText;
+			sessionStorage.setItem('foodId', current_food_id);
+		});
+	});
 
+// chinese food
+fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Chinese`)
+	.then(res => res.json())
+	.then(data => {
+		const recipe = data.meals;
+		for (var i = 0; i < 4; i++) {
+			document.getElementById('chinese_foods').innerHTML +=
+				`
+	<div class="skj_cards">
+		<img src="${recipe[i].strMealThumb}" alt="">
+		<div class="skj_discription">
+			<a href="./food.html">
+				<div class="skj_content">
+					<h1>${recipe[i].strMeal}</h1>
+					<div class="skj_symbol">
+						<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+						<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
+					</div>
+					<div style="display:none;">${recipe[i].idMeal}</div>
+				</div>
+			</a>
+		</div>
+	</div>
+`
+		}
+		$(".skj_content").click(function (e) {
+			current_food_id = e.target.lastElementChild.innerText;
+			sessionStorage.setItem('foodId', current_food_id);
+		});
+	});
 
 // american food
-fetch(`https://api.edamam.com/search?app_id=${app_id}&app_key=${app_key}&q="american"`)
-.then(res => res.json())
-.then(data =>{
-	const food=data.hits;
-	console.log(food);
-	for(var i=0;i<4;i++) {
-		const recepie=food[i].recipe;
-		console.log(recepie);
-		document.getElementById('american_foods').innerHTML +=
-		`
-			<div class="skj_cards">
-				<img src="${recepie.image}" alt="">
-				<div class="skj_discription">
-					<a href="./food.html">
-						<div class="skj_content">
-							<h1>${recepie.label}</h1>
-							<div class="skj_symbol">
-								<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
-								<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
-							</div>
+fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=American`)
+	.then(res => res.json())
+	.then(data => {
+		const recipe = data.meals;
+		for (var i = 0; i < 4; i++) {
+			document.getElementById('american_foods').innerHTML +=
+				`
+		<div class="skj_cards">
+			<img src="${recipe[i].strMealThumb}" alt="">
+			<div class="skj_discription">
+				<a href="./food.html">
+					<div class="skj_content">
+						<h1>${recipe[i].strMeal}</h1>
+						<div class="skj_symbol">
+							<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+							<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
 						</div>
-					</a>
-				</div>
+						<div style="display:none;">${recipe[i].idMeal}</div>
+					</div>
+				</a>
 			</div>
-		`
-	}
-});
+		</div>
+	`
+		}
+		$(".skj_content").click(function (e) {
+			current_food_id = e.target.lastElementChild.innerText;
+			sessionStorage.setItem('foodId', current_food_id);
+		});
+	});
 
