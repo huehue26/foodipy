@@ -1,10 +1,10 @@
-*{
-    padding : 0px;
+* {
+    padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
-body
-{
+
+body {
     background-color: rgb(238, 234, 227);
 }
 
@@ -12,8 +12,7 @@ a {
     text-decoration: none;
 }
 
-.skj_container
-{
+.skj_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,31 +20,29 @@ a {
 }
 
 /* heading  */
-.skj_container h1
-{
+.skj_container h1 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 2.5em;
     display: block;
     margin-top: 50px;
-} 
+}
 
-.skj_container  h1 , .skj_container h1
-{
+.skj_container h1,
+.skj_container h1 {
     font-family: 'Birthstone', cursive;
     font-size: 3rem;
     display: block;
     text-align: center;
 }
 
-.skj_cards .skj_discription .skj_content h1
-{
+.skj_cards .skj_discription .skj_content h1 {
     font-size: 1.5rem;
     display: block;
     text-align: center;
 }
 
-.skj_flavour , .skj_types
-{
+.skj_flavour,
+.skj_types {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -54,22 +51,22 @@ a {
 .region-heading {
     display: flex;
     justify-content: flex-start;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
 }
 
-.skj_varites 
-{
+.skj_varites {
     width: 98%;
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
     margin: 5px 5px;
     height: 80%;
     flex-wrap: wrap;
+    overflow: auto;
+    white-space: nowrap;
 }
 
-.skj_cards
-{
+.skj_cards {
     position: relative;
     width: 24%;
     margin: 5px 4px;
@@ -79,35 +76,33 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: inline-block;
 }
 
-.skj_cards img
-{
-    position: relative;
+.skj_cards img {
+    position: absolute;
     width: 92%;
     height: 92%;
-    transition-property: width , height , border-radius;
-    transition-duration: 2s , 2s , 2s;
+    transition-property: width, height, border-radius;
+    transition-duration: 2s, 2s, 2s;
     border-radius: 10px;
 }
-.skj_cards:hover img
-{
-    width: 107%;
-    height: 107%;
+
+.skj_cards:hover img {
+    width: 100%;
+    height: 90%;
     border-radius: 30px;
     cursor: pointer;
 }
 
-.skj_cards .skj_discription
-{
+.skj_cards .skj_discription {
     position: absolute;
     left: 25px;
     right: 25px;
     color: blanchedalmond;
 }
 
-.skj_cards .skj_discription::before
-{
+.skj_cards .skj_discription::before {
     content: "";
     width: 98%;
     height: 47%;
@@ -120,13 +115,13 @@ a {
     margin: auto;
     transition: all 1s;
 }
-.skj_cards .skj_discription::after
-{
+
+.skj_cards .skj_discription::after {
     content: "";
     width: 98%;
     height: 47%;
     background-color: rgba(27, 25, 25, 0.7);
-    position: absolute; 
+    position: absolute;
     left: 3px;
     right: 3px;
     bottom: -10%;
@@ -135,37 +130,34 @@ a {
     transition: all 1s;
 }
 
-.skj_cards:hover .skj_discription::before
-{
+.skj_cards:hover .skj_discription::before {
     top: 3%;
     opacity: 1;
-    cursor: pointer; 
+    cursor: pointer;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
-.skj_cards:hover .skj_discription::after
-{
+
+.skj_cards:hover .skj_discription::after {
     bottom: 3.05%;
     opacity: 1;
-    cursor: pointer; 
+    cursor: pointer;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
 
-.skj_content
-{
+.skj_content {
     font-family: 'Birthstone', cursive;
     font-size: 1.2rem;
     position: relative;
     text-align: center;
     padding: 40px 20px;
     z-index: 10;
-    opacity: 0; 
+    opacity: 0;
     transition: all 2s;
 }
 
-.skj_cards:hover .skj_content
-{
+.skj_cards:hover .skj_content {
     opacity: 1;
     transform: rotate(0deg);
 }
@@ -174,8 +166,7 @@ a {
     color: antiquewhite;
 }
 
-.skj_icons
-{
+.skj_icons {
     color: blanchedalmond;
     font-size: 10004px;
     margin: 10px 0px;
@@ -184,31 +175,28 @@ a {
 /* ####################################333333#########################################################################################33 */
 
 
-@media(max-width:950px)
-{
-    .skj_content
-    {
+@media(max-width:950px) {
+    .skj_content {
         padding: 0px 15px;
     }
-    .skj_flavour , .skj_types
-    {
+
+    .skj_flavour,
+    .skj_types {
         height: 2200px;
     }
 
-    .skj_cards
-    {
+    .skj_cards {
         /* height: 45%; */
         height: 300px;
         width: 45%;
         margin: 4px 20px;
     }
-    .skj_varites
-    {
+
+    .skj_varites {
         height: 100%;
     }
-    
-    .skj_cards .skj_discription::before
-    {
+
+    .skj_cards .skj_discription::before {
         width: 90%;
         height: 45%;
         left: 3px;
@@ -218,11 +206,11 @@ a {
         margin: auto;
         transition: all 1s;
     }
-    .skj_cards .skj_discription::after
-    {
+
+    .skj_cards .skj_discription::after {
         content: "";
         width: 90%;
-        height: 45%; 
+        height: 45%;
         left: 3px;
         right: 3px;
         bottom: -10%;
@@ -230,24 +218,24 @@ a {
         margin: auto;
         transition: all 1s;
     }
-    .skj_cards:hover .skj_discription::before
-    {
+
+    .skj_cards:hover .skj_discription::before {
         top: 5%;
         opacity: 1;
-        cursor: pointer; 
+        cursor: pointer;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
     }
-    .skj_cards:hover .skj_discription::after
-    {
+
+    .skj_cards:hover .skj_discription::after {
         bottom: 5%;
         opacity: 1;
-        cursor: pointer; 
+        cursor: pointer;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
     }
-    .skj_varites .skj_cards .skj_discription
-    {
+
+    .skj_varites .skj_cards .skj_discription {
         width: 100%;
         top: 30px;
         left: 0px;
@@ -256,39 +244,35 @@ a {
         padding: 25px 0px;
         margin: auto;
     }
-    .skj_varites .skj_cards img
-    {
+
+    .skj_varites .skj_cards img {
         height: 95%;
         width: 99%;
     }
 }
 
-@media(max-width:835px)
-{
-    .skj_cards
-    {
+@media(max-width:835px) {
+    .skj_cards {
         margin: 4px 10px;
     }
 }
 
-@media(max-width:450px)
-{
-    .skj_container
-    {
+@media(max-width:450px) {
+    .skj_container {
         min-width: 370px;
     }
-    .skj_content
-    {
+
+    .skj_content {
         padding: 0px 0px;
     }
-    .skj_flavour , .skj_types
-    {
+
+    .skj_flavour,
+    .skj_types {
         height: 3650px;
         margin: 0px;
     }
 
-    .skj_cards
-    {
+    .skj_cards {
         /* height: 45%; */
         height: 250px;
         width: 95%;

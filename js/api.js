@@ -4,7 +4,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`)
 	.then(res => res.json())
 	.then(data => {
 		const recipe = data.meals;
-		for (var i = 0; i < 4; i++) {
+		for (var i = 0; i < 10; i++) {
 			document.getElementById('indian_foods').innerHTML +=
 				`
 		<div class="skj_cards">
@@ -35,7 +35,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian`)
 	.then(res => res.json())
 	.then(data => {
 		const recipe = data.meals;
-		for (var i = 0; i < 4; i++) {
+		for (var i = 0; i < 10; i++) {
 			document.getElementById('italian_foods').innerHTML +=
 				`
 		<div class="skj_cards">
@@ -66,7 +66,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Chinese`)
 	.then(res => res.json())
 	.then(data => {
 		const recipe = data.meals;
-		for (var i = 0; i < 4; i++) {
+		for (var i = 0; i < 10; i++) {
 			document.getElementById('chinese_foods').innerHTML +=
 				`
 	<div class="skj_cards">
@@ -97,7 +97,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=American`)
 	.then(res => res.json())
 	.then(data => {
 		const recipe = data.meals;
-		for (var i = 0; i < 4; i++) {
+		for (var i = 0; i < 9; i++) {
 			document.getElementById('american_foods').innerHTML +=
 				`
 		<div class="skj_cards">
