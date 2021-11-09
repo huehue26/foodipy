@@ -186,6 +186,39 @@ body {
     color: #e79544;
 }
 
+.home-page .nav-bar .headings .search-bar {
+    margin-right: 40px;
+}
+
+.home-page .nav-bar .headings .search-bar .search-bar-input {
+    height: 30px;
+    background:transparent;
+    padding-left: 3px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    width: 190px;
+    border-bottom: 0.7px solid white;
+}
+
+.home-page .nav-bar .headings .search-bar .search-bar-input:focus{
+    outline: none;
+    border-bottom: 0.7px solid #e79544;
+}
+
+.home-page .nav-bar .headings .search-bar a button {
+    border: none;
+    background:none;
+    color: white;
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+}
+
+.home-page .nav-bar .headings .search-bar a button:hover {
+    color: #e79544;
+    cursor: pointer;
+} 
 
 /* middle text on backgroung image */
 

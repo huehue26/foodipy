@@ -4,7 +4,6 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`)
 	.then(res => res.json())
 	.then(data => {
 		const recipe = data.meals;
-		console.log(recipe);
 		for (var i = 0; i < 4; i++) {
 			document.getElementById('indian_foods').innerHTML +=
 				`
@@ -124,3 +123,8 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=American`)
 		});
 	});
 
+
+document.getElementById("search-submit").addEventListener('click',() => {
+	let search_data=document.getElementById("search-input").value;
+	sessionStorage.setItem('search_input',search_data);
+})
