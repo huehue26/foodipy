@@ -54,6 +54,8 @@ a {
 .region-heading {
     display: flex;
     justify-content: flex-start;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
 }
 
 .skj_varites 

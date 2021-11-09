@@ -4,6 +4,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`)
 	.then(res => res.json())
 	.then(data => {
 		const recipe = data.meals;
+		console.log(recipe);
 		for (var i = 0; i < 4; i++) {
 			document.getElementById('indian_foods').innerHTML +=
 				`
