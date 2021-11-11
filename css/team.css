@@ -1,150 +1,191 @@
-.wrapper{
-    display: block;
-    padding: 15px;
+.staff {
+  align-content: center;
+  text-align: center;
+  padding: 5%;
 }
-.staff{
-    align-content: center;
-    text-align: center;
-    padding: 5%;
+.staff-head-box {
+  text-align: center;
+  color: rgb(104, 79, 64);
+  display: block;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.staff-head-box{
-    text-align: center;
-    color: rgb(104,79,64);
-    display: block;
-    font-size: 17px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.line-below {
+  font-size: 17px;
+  color: dimgray;
 }
-.line-below{
-    font-size: 17px;
-    color:dimgray;
+.S-name {
+  color: #684f40;
+  font-size: 35px;
+  font-style: italic;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.S-name{
-    color: #684f40;
-    font-size: 35px;
-    font-style: italic;
-    font-weight: 700;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.staff-grid {
-    display:flex;
-    flex-flow:row wrap;
-    justify-content: stretch;
-}
-.staff-container{
-    background-color: #684f40;
-    padding: 2px;
-    margin: 0;
-    z-index: -1;
-    
-}
-.inner-container img{
-    margin-top: -40px;
-}
-.staff-network{
-    background-color:transparent;
-    display: flex;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    transform: scale(0) rotate(90deg);
-    transition: all 0.4s ease-out;
+.container {
+  display: grid;
+  width: 90%;
+  margin: 40px auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
 }
 
-.inner-container:hover{
-    color: rgba(104,79,64,0.6);
-    opacity: 0.5;
-    transform: scale(1);
-    transition: 0.3s ease;
+.front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
-.inner-container{
-    background-color:#fff;
-}
-.inner-container:hover .staff-network {
-    height: 100%;
-    opacity: 1;
-    transform:translate(-50%, -50%);
-    -ms-transform : translate(-50%, -50%);
-}
-.staff-network {
-    color: green;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  /* justify-content: space-evenly; */
-  column-gap: 10px;
-    padding: 16px 32px;
-}
-.listStyle{
-    list-style: none;
-    text-align: center;
-}
-.inner-container {
-    background-color: #fff; 
-    padding: 10px;
-  
-    z-index: 1;
-}
-.staff-container{
-      margin-bottom: 70px;
-}
-.staff-container::selection {
-    background-color: #fdb822;
-}
-.set-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 50px;
-}
-.staff-name {
-    font-size: medium;
-    text-align: center;
-    border-bottom: #fdb822;
-}
-  
-.staff-container::selection{
-    background-color: #fdb822;
-}
-.staff-container:hover{
-    background-color: #fdb822;
 
+.container1 {
+  position: relative;
 }
-.letstry:hover{
-    color:#684f40
+
+.front h2 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
 }
-.staff-name{
-    font-size:medium;
-    text-align: center;
-    border-bottom: #fdb822;
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:linear-gradient(#da9516,rgb(204, 88, 88));
+  color: white;
+  padding: 15px;
+  transform: perspective(600px) rotateY(180deg);
+  transition: transform 0.5s linear 0s;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.back h2 {
+  text-align: center;
+}
+
+.front {
+  color: white;
+  transform: perspective(600px) rotateY(0deg);
+  transition: transform 0.5s linear 0s;
+}
+
+.container1:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+  cursor: pointer;
+}
+
+.container1:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.line-border {
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fdb822;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.chef-position {
+  text-align: center;
+  font-family: fantasy;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.front-side {
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: cursive;
+  /* font-style: italic; */
+}
+.container1:hover > .front .front-side {
+  display: none;
+}
+
+/* a i {
+    color: white;
     background-color: #fff;
-
+    z-index: 50;
+} */
+.team-txt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 30px;
 }
 
-.baseline{
-    display: inline-block;
-    width: 130px;
-    height: 2px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    background-color: #ddd;
+.staff-txt {
+  margin-top: 50px;
+  font-size: larger;
+  text-align: center;
+  flex-basis: 90%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.list{
-    flex-basis: 20%;
-    margin-left: 4%;
-    align-items: stretch;
+.staff-tag {
+  flex-basis: 90%;
+  text-align: center;
+  font-family:cursive;
+  font-size: 15px;
+}
+
+.staff-icons {
     
+    margin-top: 15px;
+  display: flex;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-@media (min-width:992px){
-    .staff-container{
-        float:left;
-    }
+.back p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-@media (min-width:768px){
 
+.staff-icons a {
+  flex-basis: 30%;
+  text-align: center;
+  font-size: 30px;
+  color: black;
 }
+.desc-staff{
+    margin-top: 15px;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* text-align: justify; */
+    align-items: center;
+}
+
+#flip-bck{
+    font-weight: 300;
+}
+#last-tag{
+    position: fixed ;
+    bottom: 8px;
+    text-align: center;
+    font-family:cursive;
+    font-size: 14px;
+}
+
+
