@@ -1,11 +1,9 @@
 let foodId = sessionStorage.getItem('foodId');
-console.log(foodId);
 let cat = "";
 
 fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data.meals[0]);
         const l = data.meals[0].strYoutube;
         var len = l.length;
         var s = "";
@@ -20,8 +18,6 @@ fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
         document.getElementById('meal-name').innerText = data.meals[0].strMeal;
         document.getElementById('meal-name2').innerText = data.meals[0].strArea + " food";
         cat += data.meals[0].strArea;
-        console.log(cat);
-        // catcaller(cat);
         document.getElementById('meal-name3').innerText = "Category: " + data.meals[0].strArea;
         document.getElementById('meta').innerHTML =
             `
@@ -39,7 +35,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
         </div>
         `;
     });
-    // <div class="vid-caption-api">
+// <div class="vid-caption-api">
 
 
 var count = 0;
@@ -288,3 +284,80 @@ $('#del3').on('click', function () {
         $('#price3').text(txt);
     }, 2000);
 })
+
+
+console.log(foodId);
+// recommended food
+
+for (var i = foodId-1; i >= foodId - 15; i--) {
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${i}`)
+        .then(res => res.json())
+        .then(data => {
+            const recipe = data.meals;
+            document.getElementById('recommended_food').innerHTML +=
+                `
+		<div class= "img_and_name">
+			<div class="skj_cards">
+				<img src="${recipe[0].strMealThumb}" alt="">
+				<div class="skj_discription">
+					<a href="./food.html">
+						<div class="skj_content">
+							<div class="skj_symbol">
+								<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+								<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
+							</div>
+							<div style="display:none;">
+								${recipe[0].idMeal}
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="cake_name">
+				<h1">${recipe[0].strMeal}</h1>
+			</div>
+		</div>
+	`
+            $(".skj_content").click(function (e) {
+                current_food_id = e.target.lastElementChild.innerText;
+                sessionStorage.setItem('foodId', current_food_id);
+            });
+        });
+}
+
+for (var i = foodId+1; i <= foodId + 15; i++) {
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${i}`)
+        .then(res => res.json())
+        .then(data => {
+            const recipe = data.meals;
+            console.log(recipe);
+            document.getElementById('recommended_food').innerHTML +=
+                `
+		<div class= "img_and_name">
+			<div class="skj_cards">
+				<img src="${recipe[0].strMealThumb}" alt="">
+				<div class="skj_discription">
+					<a href="./food.html">
+						<div class="skj_content">
+							<div class="skj_symbol">
+								<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+								<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
+							</div>
+							<div style="display:none;">
+								${recipe[0].idMeal}
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="cake_name">
+				<h1">${recipe[0].strMeal}</h1>
+			</div>
+		</div>
+	`
+            $(".skj_content").click(function (e) {
+                current_food_id = e.target.lastElementChild.innerText;
+                sessionStorage.setItem('foodId', current_food_id);
+            });
+        });
+}

@@ -678,7 +678,7 @@ a {
 
 /* CART  */
 .main-shopping-container {
-    background-image: url("./img/diego-ph-5LOhydOtTKU-unsplash.jpg");
+    background-image: url("../img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     background-size: cover;
     height: 5;
     background-position: top center;
@@ -991,4 +991,19 @@ input:focus {
 #paynow .container .google:hover {
     background-color: #282b55;
     color: wheat;
+}
+
+.skj_container {
+    height: 500px !important; 
+}
+
+.skj_flavour{
+    height: 100% !important;
+}
+
+.skj_container .skj_flavour .recommended_heading {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
