@@ -2,24 +2,39 @@ document.getElementById("search-submit").addEventListener('click', () => {
     document.getElementById('content').innerHTML = "";
     let search_data = document.getElementById("search-input").value;
     sessionStorage.setItem('search_input', search_data);
+    print_data()
 })
 
-const food_search = sessionStorage.getItem('search_input')
+document.getElementById('search-input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        document.getElementById('content').innerHTML = "";
+        let search_data = document.getElementById("search-input").value;
+        sessionStorage.setItem('search_input', search_data);
+        console.log(search_data);
+        print_data()
+    }
+});
 
-// by food name
-fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${food_search}`)
-    .then(res => res.json())
-    .then(data => {
-        const recipe = data.meals;
-        recipe.forEach(element => {
-            document.getElementById('content').innerHTML +=
-                `
+print_data()
+
+function print_data() {
+    const food_search = sessionStorage.getItem('search_input')
+    console.log(food_search);
+
+    // by food name
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${food_search}`)
+        .then(res => res.json())
+        .then(data => {
+            const recipe = data.meals;
+            recipe.forEach(element => {
+                document.getElementById('content').innerHTML +=
+                    `
             <div class="skj_cards">
 			<img src="${element.strMealThumb}" alt="">
+        <h1 class="meal_heading">${element.strMeal}</h1>
 			<div class="skj_discription">
 				<a href="./food.html">
 					<div class="skj_content">
-						<h1>${element.strMeal}</h1>
 						<div class="skj_symbol">
 							<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
 							<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
@@ -30,28 +45,28 @@ fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${food_search}`)
 			</div>
 		</div>
         `
+            })
+            $(".skj_content").click(function (e) {
+                current_food_id = e.target.lastElementChild.innerText;
+                sessionStorage.setItem('foodId', current_food_id);
+            });
         })
-        $(".skj_content").click(function (e) {
-            current_food_id = e.target.lastElementChild.innerText;
-            sessionStorage.setItem('foodId', current_food_id);
-        });
-    })
 
 
-// by first letter
-fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${food_search[0]}`)
-    .then(res => res.json())
-    .then(data => {
-        const recipe = data.meals;
-        recipe.forEach(element => {
-            document.getElementById('content').innerHTML +=
-                `
+    // by first letter
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${food_search[0]}`)
+        .then(res => res.json())
+        .then(data => {
+            const recipe = data.meals;
+            recipe.forEach(element => {
+                document.getElementById('content').innerHTML +=
+                    `
         <div class="skj_cards">
         <img src="${element.strMealThumb}" alt="">
+        <h1 class="meal_heading">${element.strMeal}</h1>
         <div class="skj_discription">
             <a href="./food.html">
                 <div class="skj_content">
-                    <h1>${element.strMeal}</h1>
                     <div class="skj_symbol">
                         <i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
                         <i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
@@ -62,27 +77,27 @@ fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${food_search[0]}`)
         </div>
     </div>
     `
+            })
+            $(".skj_content").click(function (e) {
+                current_food_id = e.target.lastElementChild.innerText;
+                sessionStorage.setItem('foodId', current_food_id);
+            });
         })
-        $(".skj_content").click(function (e) {
-            current_food_id = e.target.lastElementChild.innerText;
-            sessionStorage.setItem('foodId', current_food_id);
-        });
-    })
 
-// by category
-fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${food_search}`)
-    .then(res => res.json())
-    .then(data => {
-        const recipe = data.meals;
-        recipe.forEach(element => {
-            document.getElementById('content').innerHTML +=
-                `
+    // by category
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${food_search}`)
+        .then(res => res.json())
+        .then(data => {
+            const recipe = data.meals;
+            recipe.forEach(element => {
+                document.getElementById('content').innerHTML +=
+                    `
         <div class="skj_cards">
         <img src="${element.strMealThumb}" alt="">
+        <h1 class="meal_heading">${element.strMeal}</h1>
         <div class="skj_discription">
             <a href="./food.html">
                 <div class="skj_content">
-                    <h1>${element.strMeal}</h1>
                     <div class="skj_symbol">
                         <i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
                         <i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
@@ -93,28 +108,28 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${food_search}`)
         </div>
     </div>
     `
+            })
+            $(".skj_content").click(function (e) {
+                current_food_id = e.target.lastElementChild.innerText;
+                sessionStorage.setItem('foodId', current_food_id);
+            });
         })
-        $(".skj_content").click(function (e) {
-            current_food_id = e.target.lastElementChild.innerText;
-            sessionStorage.setItem('foodId', current_food_id);
-        });
-    })
 
 
-// by area
-fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${food_search}`)
-    .then(res => res.json())
-    .then(data => {
-        const recipe = data.meals;
-        recipe.forEach(element => {
-            document.getElementById('content').innerHTML +=
-                `
+    // by area
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${food_search}`)
+        .then(res => res.json())
+        .then(data => {
+            const recipe = data.meals;
+            recipe.forEach(element => {
+                document.getElementById('content').innerHTML +=
+                    `
         <div class="skj_cards">
         <img src="${element.strMealThumb}" alt="">
+        <h1 class="meal_heading">${element.strMeal}</h1>
         <div class="skj_discription">
             <a href="./food.html">
                 <div class="skj_content">
-                    <h1>${element.strMeal}</h1>
                     <div class="skj_symbol">
                         <i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
                         <i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
@@ -125,27 +140,27 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${food_search}`)
         </div>
     </div>
     `
+            })
+            $(".skj_content").click(function (e) {
+                current_food_id = e.target.lastElementChild.innerText;
+                sessionStorage.setItem('foodId', current_food_id);
+            });
         })
-        $(".skj_content").click(function (e) {
-            current_food_id = e.target.lastElementChild.innerText;
-            sessionStorage.setItem('foodId', current_food_id);
-        });
-    })
 
-// by main ingredient
-fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${food_search}`)
-    .then(res => res.json())
-    .then(data => {
-        const recipe = data.meals;
-        recipe.forEach(element => {
-            document.getElementById('content').innerHTML +=
-                `
+    // by main ingredient
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${food_search}`)
+        .then(res => res.json())
+        .then(data => {
+            const recipe = data.meals;
+            recipe.forEach(element => {
+                document.getElementById('content').innerHTML +=
+                    `
     <div class="skj_cards">
     <img src="${element.strMealThumb}" alt="">
-    <div class="skj_discription">
+        <h1 class="meal_heading">${element.strMeal}</h1>
+        <div class="skj_discription">
         <a href="./food.html">
             <div class="skj_content">
-                <h1>${element.strMeal}</h1>
                 <div class="skj_symbol">
                     <i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
                     <i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
@@ -156,13 +171,13 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${food_search}`)
     </div>
 </div>
 `
+            })
+            $(".skj_content").click(function (e) {
+                current_food_id = e.target.lastElementChild.innerText;
+                sessionStorage.setItem('foodId', current_food_id);
+            });
         })
-        $(".skj_content").click(function (e) {
-            current_food_id = e.target.lastElementChild.innerText;
-            sessionStorage.setItem('foodId', current_food_id);
-        });
-    })
-
+}
 
 // getting filter data
 fetch(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`)
@@ -224,10 +239,10 @@ function print_data_of_category(category) {
                     `
     <div class="skj_cards">
     <img src="${element.strMealThumb}" alt="">
-    <div class="skj_discription">
+        <h1 class="meal_heading">${element.strMeal}</h1>
+        <div class="skj_discription">
         <a href="./food.html">
             <div class="skj_content">
-                <h1>${element.strMeal}</h1>
                 <div class="skj_symbol">
                     <i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
                     <i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
@@ -257,10 +272,10 @@ function print_data_of_region(region) {
                     `
     <div class="skj_cards">
     <img src="${element.strMealThumb}" alt="">
-    <div class="skj_discription">
+        <h1 class="meal_heading">${element.strMeal}</h1>
+        <div class="skj_discription">
         <a href="./food.html">
             <div class="skj_content">
-                <h1>${element.strMeal}</h1>
                 <div class="skj_symbol">
                     <i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
                     <i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>

@@ -288,7 +288,7 @@ $('#del3').on('click', function () {
 
 // recommended food
 
-for (var i = foodId-1; i >= foodId - 15; i--) {
+for (var i = foodId - 1; i >= foodId - 15; i--) {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${i}`)
         .then(res => res.json())
         .then(data => {
@@ -324,7 +324,7 @@ for (var i = foodId-1; i >= foodId - 15; i--) {
         });
 }
 
-for (var i = foodId+1; i <= foodId + 15; i++) {
+for (var i = foodId + 1; i <= foodId + 15; i++) {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${i}`)
         .then(res => res.json())
         .then(data => {
@@ -365,12 +365,12 @@ for (var i = foodId+1; i <= foodId + 15; i++) {
 // trending food
 
 fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`)
-	.then(res => res.json())
-	.then(data => {
-		const recipe = data.meals;
-		for (var i = 0; i < 4; i++) {
-			document.getElementById('trending_food').innerHTML +=
-		`
+    .then(res => res.json())
+    .then(data => {
+        const recipe = data.meals;
+        for (var i = 0; i < 4; i++) {
+            document.getElementById('trending_food').innerHTML +=
+                `
 		<div class= "img_and_name">
 			<div class="skj_cards">
 				<img src="${recipe[i].strMealThumb}" alt="">
@@ -393,20 +393,21 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`)
 			</div>
 		</div>
 	`
-		}
-		$(".skj_content").click(function (e) {
-			current_food_id = e.target.lastElementChild.innerText;
-			sessionStorage.setItem('foodId', current_food_id);
-		});
-	});
+        }
+        $(".skj_content").click(function (e) {
+            current_food_id = e.target.lastElementChild.innerText;
+            sessionStorage.setItem('foodId', current_food_id);
+        });
+    });
 
-    fetch(`www.themealdb.com/api/json/v1/1/filter.php?a=Canadian`)
-	.then(res => res.json())
-	.then(data => {
-		const recipe = data.meals;
-		for (var i = 0; i < 4; i++) {
-			document.getElementById('trending_food').innerHTML +=
-		`
+fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian`)
+    .then(res => res.json())
+    .then(data => {
+        const recipe = data.meals;
+        console.log(recipe);
+        for (var i = 0; i < 6; i++) {
+            document.getElementById('trending_food').innerHTML +=
+                `
 		<div class= "img_and_name">
 			<div class="skj_cards">
 				<img src="${recipe[i].strMealThumb}" alt="">
@@ -429,9 +430,9 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`)
 			</div>
 		</div>
 	`
-		}
-		$(".skj_content").click(function (e) {
-			current_food_id = e.target.lastElementChild.innerText;
-			sessionStorage.setItem('foodId', current_food_id);
-		});
-	});
+        }
+        $(".skj_content").click(function (e) {
+            current_food_id = e.target.lastElementChild.innerText;
+            sessionStorage.setItem('foodId', current_food_id);
+        });
+    });

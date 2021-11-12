@@ -6,7 +6,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`)
 		const recipe = data.meals;
 		for (var i = 0; i < 10; i++) {
 			document.getElementById('indian_foods').innerHTML +=
-		`
+				`
 		<div class= "img_and_name">
 			<div class="skj_cards">
 				<img src="${recipe[i].strMealThumb}" alt="">
@@ -25,7 +25,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`)
 				</div>
 			</div>
 			<div class="cake_name">
-				<h1">${recipe[i].strMeal}</h1>
+				<h1>${recipe[i].strMeal}</h1>
 			</div>
 		</div>
 	`
@@ -62,7 +62,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian`)
 					</div>
 				</div>
 				<div class="cake_name">
-					<h1">${recipe[i].strMeal}</h1>
+					<h1>${recipe[i].strMeal}</h1>
 				</div>
 			</div>
 	`
@@ -99,7 +99,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Chinese`)
 					</div>
 				</div>
 				<div class="cake_name">
-					<h1">${recipe[i].strMeal}</h1>
+					<h1>${recipe[i].strMeal}</h1>
 				</div>
 			</div>
 `
@@ -136,7 +136,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=American`)
 					</div>
 				</div>
 				<div class="cake_name">
-					<h1">${recipe[i].strMeal}</h1>
+					<h1>${recipe[i].strMeal}</h1>
 				</div>
 			</div>
 	`
@@ -148,7 +148,15 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=American`)
 	});
 
 
-document.getElementById("search-submit").addEventListener('click',() => {
-	let search_data=document.getElementById("search-input").value;
-	sessionStorage.setItem('search_input',search_data);
+document.getElementById("search-submit").addEventListener('click', () => {
+	let search_data = document.getElementById("search-input").value;
+	sessionStorage.setItem('search_input', search_data);
 })
+
+document.getElementById('search-input').addEventListener('keypress', function (e) {
+	if (e.key === 'Enter') {
+		let search_data = document.getElementById("search-input").value;
+		sessionStorage.setItem('search_input', search_data);
+		window.open("search.html","_self");
+	}
+});

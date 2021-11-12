@@ -39,6 +39,7 @@ a {
 .cake_name h1
 {
     font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
 }
 .skj_cards .skj_discription .skj_content h1 {
     font-size: 1.5rem;

@@ -28,24 +28,34 @@
                         </button>
                     </a>
                 </div>
+                <!-- <div class="filter">
+                    <button id="filter-button">
+                        Filters <i class="fas fa-filter"></i>
+                    </button>
+                </div> -->
             </div>
         </div>
     </main>
-    <div class="main-container">
+    <div id="filter-container">
         <div class="filters">
-            <h1 class="heading">Filters</h1>
-            <p class="sub-heading">By Category</p>
-            <div id="by-category"></div>
-
-            <p class="sub-heading">By Region</p>
-            <div id="by-region"></div>
-
+            <div class="parts">
+                <p class="sub-heading">By Category</p>
+                <div id="by-category"></div>
+            </div>
+            <div class="parts">
+                <p class="sub-heading">By Region</p>
+                <div id="by-region"></div>
+            </div>
+        </div>
+        <div class="filter-search-div">
             <button id="filter-search">Search</button>
         </div>
-        <div class="skj_flavour">
-            <div class="skj_varites" id="content"></div>
-        </div>
     </div>
+
+    <div class="skj_flavour">
+        <div class="skj_varites" id="content"></div>
+    </div>
+    <!-- </div> -->
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/logic.js"></script>
