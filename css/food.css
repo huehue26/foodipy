@@ -1004,6 +1004,10 @@ input:focus {
 .skj_container .skj_flavour .recommended_heading {
     font-size: 30px;
     margin-top: 50px;
-    margin-left: 36px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 49px;
+    font-family:initial;
+}
+
+.foods_reco {
+    margin-top: 50px;
 }
