@@ -318,10 +318,7 @@
 #hero-banner {
     overflow: hidden;
     height: 100vh;
-    background: url("./img//banner.jpg");
-    /* background-image: linear-gradient(
-        180deg, rgba(36, 24, 24, 0.6), rgba(14, 12, 12, 0.7)), url("/img/banner.jpg"); */
-       
+    background: url("../img/banner.jpg");   
     background-size: cover;
     color: #fff;
     margin-top: 70 px;
@@ -472,7 +469,7 @@ a {
 
 #vid-container-food{
     z-index: -10;
-    background-image: url("./img/brooke-lark-08bOYnH_r_E-unsplash.jpg");
+    background-image: url("../img/brooke-lark-08bOYnH_r_E-unsplash.jpg");
     /* background-image: linear-gradient( 
         180deg, rgba(0, 0, 0, 1), rgba(14, 9, 9, 0.7)),url("/img/abhishek-hajare-8c7TLVqzLbE-unsplash.jpg"); */
     background-color: rgb(14 12 11 / 50%);
@@ -776,7 +773,7 @@ a {
     margin-right: 50px;
 }
 
-Let’s add some basic style to product name and description. .description {
+.description {
     padding-top: 10px;
     margin-right: 60px;
     width: 115px;

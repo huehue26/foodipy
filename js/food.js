@@ -29,12 +29,12 @@ fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
         <iframe width="550" height="405" src="https://www.youtube.com/embed/${s}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          <div class="ingredients-api">
          <div class="ingrd-heading">Ingredients Used</div>
-        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient1}</div>
-        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient2}</div>
-        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient3}</div>
-        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient4}</div>
-        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient5}</div>
-        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient6}</div>
+        <div class="ingrd-name"><i class="fas fa-seedling"></i> ${data.meals[0].strIngredient1}</div>
+        <div class="ingrd-name"><i class="fas fa-seedling"></i> ${data.meals[0].strIngredient2}</div>
+        <div class="ingrd-name"><i class="fas fa-seedling"></i> ${data.meals[0].strIngredient3}</div>
+        <div class="ingrd-name"><i class="fas fa-seedling"></i> ${data.meals[0].strIngredient4}</div>
+        <div class="ingrd-name"><i class="fas fa-seedling"></i> ${data.meals[0].strIngredient5}</div>
+        <div class="ingrd-name"><i class="fas fa-seedling"></i> ${data.meals[0].strIngredient6}</div>
         </div>
         </div>
         `;
@@ -43,37 +43,6 @@ fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
 
 
 var count = 0;
-// by category
-// function catcaller(str) {
-//     console.log(str);
-//     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${str}`)
-//         .then(res => {res.json()
-//         console.log(res)})
-//         .then(data => {
-//             const element = data.meals;
-//             console.log(element);
-//             // `
-//             for (var i = 0; i < 2; i++) {
-//                 count++;
-//                 console.log(count);
-//                 if (count == 1) {
-//                     document.getElementById('meal2-name').innerText = element[i].strMeal;
-//                     document.getElementById('meal2-name2').innerText = element[i].strArea + " food";
-//                     document.getElementById('meal2-name3').innerText = "Category: " + element[i].strArea;
-//                 }
-//                 else if (count == 2) {
-//                     document.getElementById('meal3-name').innerText = element[i].strMeal;
-//                     document.getElementById('meal3-name2').innerText = element[i].strArea + " food";
-//                     document.getElementById('meal3-name3').innerText = "Category: " + element[i].strArea;
-//                 }
-//             }
-//             $(".skj_content").click(function (e) {
-//                 current_food_id = e.target.lastElementChild.innerText;
-//                 sessionStorage.setItem('foodId', current_food_id);
-//             });
-//         })
-
-// }
 
 document.getElementById("search-submit").addEventListener('click', () => {
     let search_data = document.getElementById("search-input").value;
