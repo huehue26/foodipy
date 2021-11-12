@@ -27,10 +27,19 @@ fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
             `
 		<div id="hello">
         <iframe width="550" height="405" src="https://www.youtube.com/embed/${s}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="vid-caption-api">Steps to follow to prepare this <span>Dish</span></div>
-		</div>
+         <div class="ingredients-api">
+         <div class="ingrd-heading">Ingredients Used</div>
+        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient1}</div>
+        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient2}</div>
+        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient3}</div>
+        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient4}</div>
+        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient5}</div>
+        <div class="ingrd-name"><i class="fal fa-seedling"></i> ${data.meals[0].strIngredient6}</div>
+        </div>
+        </div>
         `;
     });
+    // <div class="vid-caption-api">
 
 
 var count = 0;
