@@ -6,20 +6,26 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`)
 		const recipe = data.meals;
 		for (var i = 0; i < 10; i++) {
 			document.getElementById('indian_foods').innerHTML +=
-				`
-		<div class="skj_cards">
-			<img src="${recipe[i].strMealThumb}" alt="">
-			<div class="skj_discription">
-				<a href="./food.html">
-					<div class="skj_content">
-						<h1>${recipe[i].strMeal}</h1>
-						<div class="skj_symbol">
-							<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
-							<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
+		`
+		<div class= "img_and_name">
+			<div class="skj_cards">
+				<img src="${recipe[i].strMealThumb}" alt="">
+				<div class="skj_discription">
+					<a href="./food.html">
+						<div class="skj_content">
+							<div class="skj_symbol">
+								<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+								<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
+							</div>
+							<div style="display:none;">
+								${recipe[i].idMeal}
+							</div>
 						</div>
-						<div style="display:none;">${recipe[i].idMeal}</div>
-					</div>
-				</a>
+					</a>
+				</div>
+			</div>
+			<div class="cake_name">
+				<h1">${recipe[i].strMeal}</h1>
 			</div>
 		</div>
 	`
@@ -38,21 +44,27 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian`)
 		for (var i = 0; i < 10; i++) {
 			document.getElementById('italian_foods').innerHTML +=
 				`
-		<div class="skj_cards">
-			<img src="${recipe[i].strMealThumb}" alt="">
-			<div class="skj_discription">
-				<a href="./food.html">
-					<div class="skj_content">
-						<h1>${recipe[i].strMeal}</h1>
-						<div class="skj_symbol">
-							<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
-							<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
-						</div>
-						<div style="display:none;">${recipe[i].idMeal}</div>
+			<div class= "img_and_name">
+				<div class="skj_cards">
+					<img src="${recipe[i].strMealThumb}" alt="">
+					<div class="skj_discription">
+						<a href="./food.html">
+							<div class="skj_content">
+								<div class="skj_symbol">
+									<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+									<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
+								</div>
+								<div style="display:none;">
+									${recipe[i].idMeal}
+								</div>
+							</div>
+						</a>
 					</div>
-				</a>
+				</div>
+				<div class="cake_name">
+					<h1">${recipe[i].strMeal}</h1>
+				</div>
 			</div>
-		</div>
 	`
 		}
 		$(".skj_content").click(function (e) {
@@ -69,21 +81,27 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Chinese`)
 		for (var i = 0; i < 10; i++) {
 			document.getElementById('chinese_foods').innerHTML +=
 				`
-	<div class="skj_cards">
-		<img src="${recipe[i].strMealThumb}" alt="">
-		<div class="skj_discription">
-			<a href="./food.html">
-				<div class="skj_content">
-					<h1>${recipe[i].strMeal}</h1>
-					<div class="skj_symbol">
-						<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
-						<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
+			<div class= "img_and_name">
+				<div class="skj_cards">
+					<img src="${recipe[i].strMealThumb}" alt="">
+					<div class="skj_discription">
+						<a href="./food.html">
+							<div class="skj_content">
+								<div class="skj_symbol">
+									<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+									<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
+								</div>
+								<div style="display:none;">
+									${recipe[i].idMeal}
+								</div>
+							</div>
+						</a>
 					</div>
-					<div style="display:none;">${recipe[i].idMeal}</div>
 				</div>
-			</a>
-		</div>
-	</div>
+				<div class="cake_name">
+					<h1">${recipe[i].strMeal}</h1>
+				</div>
+			</div>
 `
 		}
 		$(".skj_content").click(function (e) {
@@ -100,21 +118,27 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=American`)
 		for (var i = 0; i < 9; i++) {
 			document.getElementById('american_foods').innerHTML +=
 				`
-		<div class="skj_cards">
-			<img src="${recipe[i].strMealThumb}" alt="">
-			<div class="skj_discription">
-				<a href="./food.html">
-					<div class="skj_content">
-						<h1>${recipe[i].strMeal}</h1>
-						<div class="skj_symbol">
-							<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
-							<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
-						</div>
-						<div style="display:none;">${recipe[i].idMeal}</div>
+			<div class= "img_and_name">
+				<div class="skj_cards">
+					<img src="${recipe[i].strMealThumb}" alt="">
+					<div class="skj_discription">
+						<a href="./food.html">
+							<div class="skj_content">
+								<div class="skj_symbol">
+									<i class="fa fa-shopping-cart skj_icons" style=" margin: 25px 28px 0px 0px; font-size: 35px;"></i>
+									<i class="fa fa-heart skj_icons" style="margin: 25px 0px 0px 28px; font-size:35px;"></i>
+								</div>
+								<div style="display:none;">
+									${recipe[i].idMeal}
+								</div>
+							</div>
+						</a>
 					</div>
-				</a>
+				</div>
+				<div class="cake_name">
+					<h1">${recipe[i].strMeal}</h1>
+				</div>
 			</div>
-		</div>
 	`
 		}
 		$(".skj_content").click(function (e) {

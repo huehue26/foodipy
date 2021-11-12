@@ -1,473 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foodipy</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/team.css" />
-    <link rel="stylesheet" href="./css/category.css" />
-    <link rel="shortcut icon" href="#" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Birthstone&family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css"
-      integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodipy</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/team.css" />
+  <link rel="stylesheet" href="./css/category.css" />
+  <link rel="shortcut icon" href="#" />
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <!-- <style>
-        .back{
-            text-align: center;
-            display: flex;
-            align-items: center;
-            row-gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .chef-position{
-            flex-basis: 80%;
-        }
-        .staff-icons{
-            flex-basis: 90%;
-            display: flex;
-            /* height: 50%; */
-            margin: auto;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .staff-icons a{
-            flex-basis: 30%;
-            text-align: center;
-            font-size: 40px;
-        }
-        .staff-icons a i{
-            background-color: orange;
-        }
-        .desc-staff{
-            flex-basis: 95%;
-        }
-        #last-tag{
-            flex-basis: 95%;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css"
+    integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    </style> -->
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+</head>
 
-  <body>
-    <!-- Loading effect -->
-    <div class="loading-div">
-      <div class="loading-animation">
-        <div class="bar bar1"></div>
-        <div class="bar bar2"></div>
-        <div class="bar bar3"></div>
-        <div class="bar bar4"></div>
-        <div class="bar bar5"></div>
-        <div class="bar bar6"></div>
-        <div class="bar bar7"></div>
-        <div class="bar bar8"></div>
+<body>
+  <!-- Loading effect -->
+  <div class="loading-div">
+    <div class="loading-animation">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+      <div class="bar bar4"></div>
+      <div class="bar bar5"></div>
+      <div class="bar bar6"></div>
+      <div class="bar bar7"></div>
+      <div class="bar bar8"></div>
+    </div>
+  </div>
+  <main class="home-page">
+    <div class="video-container">
+      <div class="color-overlay"></div>
+      <video autoplay loop muted id="home-video">
+        <source src="./vid/My Movie 1.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="nav-bar">
+      <div>
+        <h1 class="logo">Foodipy</h1>
+      </div>
+      <div class="headings">
+        <div class="search-bar">
+          <input type="text" class="search-bar-input" placeholder="Search" id="search-input" />
+          <a href="./search.html">
+            <button id="search-submit">
+              <i class="fas fa-search fa-sm"></i>
+            </button>
+          </a>
+        </div>
+        <a href="#">
+          <p class="sub-headings">Our Bakery</p>
+        </a>
+        <a href="#">
+          <p class="sub-headings">Contact</p>
+        </a>
+        <button id="login-button">Log In</button>
+        <button id="signup-button">Sign Up</button>
       </div>
     </div>
-    <main class="home-page">
-      <div class="video-container">
-        <div class="color-overlay"></div>
-        <video autoplay loop muted id="home-video">
-          <source src="./vid/My Movie 1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="nav-bar">
-        <div>
-          <h1 class="logo">Foodipy</h1>
-        </div>
-        <div class="headings">
-          <div class="search-bar">
-            <input
-              type="text"
-              class="search-bar-input"
-              placeholder="Search"
-              id="search-input"
-            />
-            <a href="./search.html">
-              <button id="search-submit">
-                <i class="fas fa-search fa-sm"></i>
-              </button>
-            </a>
-          </div>
-          <a href="#">
-            <p class="sub-headings">Our Bakery</p>
-          </a>
-          <a href="#">
-            <p class="sub-headings">Contact</p>
-          </a>
-          <button id="login-button">Log In</button>
-          <button id="signup-button">Sign Up</button>
-        </div>
-      </div>
-      <div class="content">
-        <p>Daily Fresh</p>
-        <p>Baked Goods</p>
-        <button>Order Now</button>
-      </div>
-      <div id="signup">
-        <div class="container">
-          <div class="heading">
-            <div class="sub-heading">Sign Up</div>
-            <div>
-              <button id="close-signup"><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-          <p id="signup-error"></p>
-          <div id="div-name-input">
-            <input
-              id="name-input"
-              type="text"
-              class="input"
-              placeholder="Full Name"
-            />
-          </div>
-          <div id="div-email-input">
-            <input
-              id="email-input"
-              type="text"
-              class="input"
-              placeholder="Email"
-            />
-          </div>
-          <div class="check-box">
-            <input type="checkbox" id="checkbox" />
-            <span class="check-box-message"
-              >I agree to Bakify's Terms of Service, Privacy Policy and Content
-              Policies</span
-            >
-          </div>
-          <div>
-            <button id="submit-signup">Create Account</button>
-          </div>
-          <div style="font-size: 20px">or</div>
-          <div>
-            <button class="google">
-              <i class="fab fa-google"></i>&emsp;Continue with Google
-            </button>
-          </div>
-          <div class="have-acc">
-            Already Have a Account ? <button id="login_account">Log In</button>
-          </div>
-        </div>
-      </div>
-      <div id="login">
-        <div class="container">
-          <div class="heading">
-            <div class="sub-heading">Log in</div>
-            <div>
-              <button id="close-login"><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-          <p id="login-error"></p>
-          <div>
-            <input
-              id="phone-input"
-              type="number"
-              class="input"
-              placeholder="Phone Number"
-            />
-          </div>
-          <div>
-            <input
-              id="password-input"
-              type="text"
-              class="input"
-              placeholder="Password"
-            />
-          </div>
-          <div>
-            <button class="submit-login">Log In</button>
-          </div>
-          <div style="font-size: 20px">or</div>
-          <div>
-            <button class="google">
-              <i class="fab fa-google"></i>&emsp;Continue with Google
-            </button>
-          </div>
-          <div class="have-acc">
-            New to Bakify? <button id="create_account">Create Account</button>
-          </div>
-        </div>
-      </div>
-    </main>
-    <!-- category -->
-    <div class="skj_container">
-      <!--category by flavour  -->
-      <h1>Famous Dishes Around You</h1>
-      <div class="skj_flavour">
-        <h1 class="region-heading">
-          Indian <i class="fas fa-chevron-right fa-xs"></i>
-        </h1>
-        <div class="skj_varites" id="indian_foods"></div>
-      </div>
-      <div class="skj_flavour">
-        <h1 class="region-heading">
-          Italian <i class="fas fa-chevron-right fa-xs"></i>
-        </h1>
-        <div class="skj_varites" id="italian_foods"></div>
-      </div>
-      <div class="skj_flavour">
-        <h1 class="region-heading">
-          Chinese <i class="fas fa-chevron-right fa-xs"></i>
-        </h1>
-        <div class="skj_varites" id="chinese_foods"></div>
-      </div>
-      <div class="skj_flavour">
-        <h1 class="region-heading">
-          American <i class="fas fa-chevron-right fa-xs"></i>
-        </h1>
-        <div class="skj_varites" id="american_foods"></div>
-      </div>
+    <div class="content">
+      <p>Daily Fresh</p>
+      <p>Baked Goods</p>
+      <button>Order Now</button>
     </div>
-
-    <!--TEAM-->
-    <div class="main-team-container">
-      <div class="staff">
-        <div class="staff-head-box">
-          <span class="S-name">STAFF<br /></span>
-          <div class="line-border"></div>
-          <div class="baseline"></div>
-        </div>
-        <div class="line-below">Quantify success with a quality team</div>
-        <div style="font-family: cursive;">Feel the quality</div>
-      </div>
+    <div id="signup">
       <div class="container">
-        <div class="container1">
-          <div class="front">
-            <img src="img/m-personnel-1.png" />
-            <div class="front-side">PARUL</div>
-          </div>
-        <div class="back">
-            <h2>Parul</h2>
-            <p class="chef-position">Chef de cuisine</p>
-            <div class="staff-icons">
-              <a><i class="fab fa-facebook-square"></i></a>
-              <a><i class="fab fa-twitter-square"></i></a>
-              <a><i class="fab fa-instagram-square"></i></a>
-            </div>
-
-            <p class="desc-staff">
-              She has served in Hotel Taj in her prime time.Recognized by Forbes for the Guinness World Record Coverage-2018.Gold Award -Rising star chef of the Year-2019.
-              <p id="last-tag">OUR SUCCESS STARTS WITH YOU</p>
-            </p>
+        <div class="heading">
+          <div class="sub-heading">Sign Up</div>
+          <div>
+            <button id="close-signup"><i class="fas fa-times"></i></button>
           </div>
         </div>
-        <div class="container1">
-          <div class="front">
-            <img src="img/m-personnel-2.png" />
-            <div class="front-side">SAHIB</div>
-          </div>
-
-          <div class="back">
-            <h2>Sahib Singh</h2>
-            <p class="chef-position">Sous-chef</p>
-            <div class="staff-icons">
-                <a><i class="fab fa-facebook-square"></i></a>
-                <a><i class="fab fa-twitter-square"></i></a>
-                <a><i class="fab fa-instagram-square"></i></a>
-              </div>
-            <p class="desc-staff">
-                He is one of the most famous chefs in the world, this celebrity chef-proprietor holds 6 Michelin stars.Certification training from Morocco Hotel, Chicago in the year 2015.
-            </p>
-            <p id="last-tag">OUR SUCCESS STARTS WITH YOU</p>
-          </div>
+        <p id="signup-error"></p>
+        <div id="div-name-input">
+          <input id="name-input" type="text" class="input" placeholder="Full Name" />
         </div>
-        <div class="container1">
-          <div class="front">
-            <img src="img/m-personnel-3.png" />
-            <div class="front-side">SOMESH</div>
-          </div>
-          <div class="back">
-            <h2>Somesh Singh</h2>
-            <p class="chef-position">Chef de partie</p>
-            <div class="staff-icons">
-                <a><i class="fab fa-facebook-square"></i></a>
-                <a><i class="fab fa-twitter-square"></i></a>
-                <a><i class="fab fa-instagram-square"></i></a>
-              </div>
-            <p class="desc-staff">
-              He is a renowned for his bakery snacks.He was recently awarded with Outstanding Pastry Chef. Cook and Bake Academy New Delhi-Recognized for outstanding accomplishment.
-            </p>
-            <p id="last-tag">OUR SUCCESS STARTS WITH YOU</p>
-          </div>
+        <div id="div-email-input">
+          <input id="email-input" type="text" class="input" placeholder="Email" />
         </div>
-        <div class="container1">
-          <div class="front">
-            <img src="img/m-personnel-4.png" />
-            <div class="front-side">SHUBHAM</div>
-          </div>
-          <div class="back">
-            <h2>Shubham Jha</h2>
-            <p id="flip-bck" class="chef-position">Commis</p>
-            <div class="staff-icons">
-                <a><i class="fab fa-facebook-square"></i></a>
-                <a><i class="fab fa-twitter-square"></i></a>
-                <a><i class="fab fa-instagram-square"></i></a>
-              </div>
-            <p class="desc-staff">
-              He is best known for reviving culinary pilgrimage of different regions and unique dishes.He’s even been awarded an OBE by Her Majesty the Queen for his services.
-            </p>
-            <p id="last-tag">OUR SUCCESS STARTS WITH YOU</p>
-          </div>
+        <div class="check-box">
+          <input type="checkbox" id="checkbox" />
+          <span class="check-box-message">I agree to Bakify's Terms of Service, Privacy Policy and Content
+            Policies</span>
+        </div>
+        <div>
+          <button id="submit-signup">Create Account</button>
+        </div>
+        <div style="font-size: 20px">or</div>
+        <div>
+          <button class="google">
+            <i class="fab fa-google"></i>&emsp;Continue with Google
+          </button>
+        </div>
+        <div class="have-acc">
+          Already Have a Account ? <button id="login_account">Log In</button>
         </div>
       </div>
     </div>
-
-    <!-- contact form -->
-    <section>
-      <div class="main-order-form">
-        <div class="order-form-flex">
-          <div class="order-form-flex-left">
-            <div class="order-left-child">
-              <h4 class="order-left-h4">OFFICE IN NEW DELHI</h4>
-              <p class="order-form-p">BASEMENT COMPANY, DWARKA</p>
-              <p class="order-para">
-                <span
-                  ><i class="order-form-icon fa fa-envelope"></i
-                  >bake@bread.com</span
-                >
-              </p>
-              <p class="order-para-num order-para">
-                <span
-                  ><i class="order-form-icon fa fa-phone-square"></i> +91
-                  8090706050</span
-                >
-              </p>
-            </div>
-            <div class="order-left-child">
-              <h4 class="order-left-h4">OFFICE IN CHANDIGARAH</h4>
-              <p class="order-form-p">
-                BASEMENT COMPANY, INDUSTRIAL AREA Phase 1
-              </p>
-              <p class="order-para">
-                <span
-                  ><i class="order-form-icon fa fa-envelope"></i
-                  >bake_chd@bread.com</span
-                >
-              </p>
-              <p class="order-para-num order-para">
-                <span
-                  ><i class="order-form-icon fa fa-phone-square"></i>+91
-                  4090706050</span
-                >
-              </p>
-            </div>
-            <div class="order-left-child">
-              <h4 class="order-left-h4">OFFICE IN KURUKSHETRA</h4>
-              <p class="order-form-p">BASEMENT COMPANY, INDUSTRIAL AREA-II</p>
-              <p class="order-para">
-                <span
-                  ><i class="order-form-icon fa fa-envelope"></i
-                  >bake_kkr@bread.com</span
-                >
-              </p>
-              <p class="order-para-num order-para">
-                <span
-                  ><i class="order-form-icon fa fa-phone-square"></i>+91
-                  8090006050</span
-                >
-              </p>
-            </div>
+    <div id="login">
+      <div class="container">
+        <div class="heading">
+          <div class="sub-heading">Log in</div>
+          <div>
+            <button id="close-login"><i class="fas fa-times"></i></button>
           </div>
-          <div class="order-form-flex-right">
-            <h3 class="order-right-h3">Have a Question?</h3>
-            <!-- <div class="order-right-para">
+        </div>
+        <p id="login-error"></p>
+        <div>
+          <input id="phone-input" type="number" class="input" placeholder="Phone Number" />
+        </div>
+        <div>
+          <input id="password-input" type="text" class="input" placeholder="Password" />
+        </div>
+        <div>
+          <button class="submit-login">Log In</button>
+        </div>
+        <div style="font-size: 20px">or</div>
+        <div>
+          <button class="google">
+            <i class="fab fa-google"></i>&emsp;Continue with Google
+          </button>
+        </div>
+        <div class="have-acc">
+          New to Bakify? <button id="create_account">Create Account</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- category -->
+  <div class="skj_container">
+    <!--category by flavour  -->
+    <h1>Famous Dishes Around You</h1>
+    <div class="skj_flavour">
+      <h1 class="region-heading">
+        Indian <i class="fas fa-chevron-right fa-xs"></i>
+      </h1>
+      <div class="skj_varites" id="indian_foods"></div>
+    </div>
+    <div class="skj_flavour">
+      <h1 class="region-heading">
+        Italian <i class="fas fa-chevron-right fa-xs"></i>
+      </h1>
+      <div class="skj_varites" id="italian_foods"></div>
+    </div>
+    <div class="skj_flavour">
+      <h1 class="region-heading">
+        Chinese <i class="fas fa-chevron-right fa-xs"></i>
+      </h1>
+      <div class="skj_varites" id="chinese_foods"></div>
+    </div>
+    <div class="skj_flavour">
+      <h1 class="region-heading">
+        American <i class="fas fa-chevron-right fa-xs"></i>
+      </h1>
+      <div class="skj_varites" id="american_foods"></div>
+    </div>
+  </div>
+
+  <!--TEAM-->
+  <div class="main-team-container">
+    <div class="staff">
+      <div class="staff-head-box">
+        <span class="S-name">STAFF<br /></span>
+        <div class="line-border"></div>
+        <div class="baseline"></div>
+      </div>
+      <div class="line-below">Quantify success with a quality team</div>
+      <div style="font-family: cursive;">Feel the quality</div>
+    </div>
+    <div class="container">
+      <div class="container1">
+        <div class="front">
+          <img src="img/m-personnel-1.png" />
+          <div class="front-side">PARUL</div>
+        </div>
+        <div class="back">
+          <h2>Parul</h2>
+          <p class="chef-position">Chef de cuisine</p>
+          <div class="staff-icons">
+            <a><i class="fab fa-facebook-square"></i></a>
+            <a><i class="fab fa-twitter-square"></i></a>
+            <a><i class="fab fa-instagram-square"></i></a>
+          </div>
+
+          <p class="desc-staff">
+            She has served in Hotel Taj in her prime time.Recognized by Forbes for the Guinness World Record
+            Coverage-2018.Gold Award -Rising star chef of the Year-2019.
+          <p id="last-tag">OUR SUCCESS STARTS WITH YOU</p>
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="img/m-personnel-2.png" />
+          <div class="front-side">SAHIB</div>
+        </div>
+
+        <div class="back">
+          <h2>Sahib Singh</h2>
+          <p class="chef-position">Sous-chef</p>
+          <div class="staff-icons">
+            <a><i class="fab fa-facebook-square"></i></a>
+            <a><i class="fab fa-twitter-square"></i></a>
+            <a><i class="fab fa-instagram-square"></i></a>
+          </div>
+          <p class="desc-staff">
+            He is one of the most famous chefs in the world, this celebrity chef-proprietor holds 6 Michelin
+            stars.Certification training from Morocco Hotel, Chicago in the year 2015.
+          </p>
+          <p id="last-tag">OUR SUCCESS STARTS WITH YOU</p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="img/m-personnel-3.png" />
+          <div class="front-side">SOMESH</div>
+        </div>
+        <div class="back">
+          <h2>Somesh Singh</h2>
+          <p class="chef-position">Chef de partie</p>
+          <div class="staff-icons">
+            <a><i class="fab fa-facebook-square"></i></a>
+            <a><i class="fab fa-twitter-square"></i></a>
+            <a><i class="fab fa-instagram-square"></i></a>
+          </div>
+          <p class="desc-staff">
+            He is a renowned for his bakery snacks.He was recently awarded with Outstanding Pastry Chef. Cook and Bake
+            Academy New Delhi-Recognized for outstanding accomplishment.
+          </p>
+          <p id="last-tag">OUR SUCCESS STARTS WITH YOU</p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="img/m-personnel-4.png" />
+          <div class="front-side">SHUBHAM</div>
+        </div>
+        <div class="back">
+          <h2>Shubham Jha</h2>
+          <p id="flip-bck" class="chef-position">Commis</p>
+          <div class="staff-icons">
+            <a><i class="fab fa-facebook-square"></i></a>
+            <a><i class="fab fa-twitter-square"></i></a>
+            <a><i class="fab fa-instagram-square"></i></a>
+          </div>
+          <p class="desc-staff">
+            He is best known for reviving culinary pilgrimage of different regions and unique dishes.He’s even been
+            awarded an OBE by Her Majesty the Queen for his services.
+          </p>
+          <p id="last-tag">OUR SUCCESS STARTS WITH YOU</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact form -->
+  <section>
+    <div class="main-order-form">
+      <div class="order-form-flex">
+        <div class="order-form-flex-left">
+          <div class="order-left-child">
+            <h4 class="order-left-h4">OFFICE IN NEW DELHI</h4>
+            <p class="order-form-p">BASEMENT COMPANY, DWARKA</p>
+            <p class="order-para">
+              <span><i class="order-form-icon fa fa-envelope"></i>bake@bread.com</span>
+            </p>
+            <p class="order-para-num order-para">
+              <span><i class="order-form-icon fa fa-phone-square"></i> +91
+                8090706050</span>
+            </p>
+          </div>
+          <div class="order-left-child">
+            <h4 class="order-left-h4">OFFICE IN CHANDIGARAH</h4>
+            <p class="order-form-p">
+              BASEMENT COMPANY, INDUSTRIAL AREA Phase 1
+            </p>
+            <p class="order-para">
+              <span><i class="order-form-icon fa fa-envelope"></i>bake_chd@bread.com</span>
+            </p>
+            <p class="order-para-num order-para">
+              <span><i class="order-form-icon fa fa-phone-square"></i>+91
+                4090706050</span>
+            </p>
+          </div>
+          <div class="order-left-child">
+            <h4 class="order-left-h4">OFFICE IN KURUKSHETRA</h4>
+            <p class="order-form-p">BASEMENT COMPANY, INDUSTRIAL AREA-II</p>
+            <p class="order-para">
+              <span><i class="order-form-icon fa fa-envelope"></i>bake_kkr@bread.com</span>
+            </p>
+            <p class="order-para-num order-para">
+              <span><i class="order-form-icon fa fa-phone-square"></i>+91
+                8090006050</span>
+            </p>
+          </div>
+        </div>
+        <div class="order-form-flex-right">
+          <h3 class="order-right-h3">Have a Question?</h3>
+          <!-- <div class="order-right-para">
                         Delivery free wafer fruitcake. Pastry toffee wafer gingerbread liquorice. Apple pie gingerbread
                         caramels toffee tart bonbon.
                     </div> -->
-            <div class="order_form" id="odr_form">
-              <form action="" class="order-input">
-                <label class="order-form-label" for="#order-name"
-                  >Name<br
-                /></label>
-                <input
-                  class="order-form-input"
-                  type="text"
-                  name=""
-                  id="order-name"
-                  placeholder="Xavier"
-                />
-                <label class="order-form-label" for="#order-email"
-                  >E-mail <br
-                /></label>
-                <input
-                  class="order-form-input"
-                  type="text"
-                  name=""
-                  id="order-email"
-                  placeholder="abc@gamil.com"
-                />
-                <label class="order-form-label" for="#order-num"
-                  >Mobile Number <br
-                /></label>
-                <input
-                  class="order-form-input"
-                  type="text"
-                  name=""
-                  id="order-num"
-                  placeholder="9780906050"
-                />
-                <input type="button" value="Submit" id="order-form-but" />
-              </form>
-            </div>
+          <div class="order_form" id="odr_form">
+            <form action="" class="order-input">
+              <label class="order-form-label" for="#order-name">Name<br /></label>
+              <input class="order-form-input" type="text" name="" id="order-name" placeholder="Xavier" />
+              <label class="order-form-label" for="#order-email">E-mail <br /></label>
+              <input class="order-form-input" type="text" name="" id="order-email" placeholder="abc@gamil.com" />
+              <label class="order-form-label" for="#order-num">Mobile Number <br /></label>
+              <input class="order-form-input" type="text" name="" id="order-num" placeholder="9780906050" />
+              <input type="button" value="Submit" id="order-form-but" />
+            </form>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-      $(window).on("load", function () {
-        setTimeout(preloader_close, 0);
+  <!-- JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(window).on("load", function () {
+      setTimeout(preloader_close, 0);
+    });
+
+    function preloader_close() {
+      $(".loading-div").fadeOut("slow");
+      $(" html, body").css({
+        overflow: "auto",
       });
+    }
+  </script>
+  <script src="./js/api.js"></script>
+  <script src="./js/logic.js"></script>
+  <script src="./js/order_form.js"></script>
+</body>
 
-      function preloader_close() {
-        $(".loading-div").fadeOut("slow");
-        $(" html, body").css({
-          overflow: "auto",
-        });
-      }
-    </script>
-    <script src="./js/api.js"></script>
-    <script src="./js/logic.js"></script>
-    <script src="./js/order_form.js"></script>
-  </body>
 </html>
