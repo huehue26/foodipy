@@ -147,6 +147,7 @@ body {
     margin-left: 200px;
     margin-right: 200px;
     font-size: 40px;
+    color: white;
 }
 
 .home-page .nav-bar .headings {
@@ -276,6 +277,7 @@ body {
 
   .headings .dropbtn i {
     margin-left: 9px;
+    font-size: 20px;
   }
 
   .headings .dropdown-content {

@@ -38,8 +38,8 @@ body {
 }
 
 .little-profile .pro-img img {
-    width: 128px;
-    height: 128px;
+    width: 148px;
+    height: 125px;
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 100%
@@ -121,11 +121,12 @@ p {
     position: relative;
 }
 
-.home-page .logo h1{
+.home-page .logo a{
     font-size: 35px;
     font-family: cursive;
     color: white;
     padding-left: 10%;
+    text-decoration: none;
 }
 
 .home-page .nav-bar{

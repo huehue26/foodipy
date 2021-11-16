@@ -22,7 +22,7 @@
     position: relative;
 }
 
-.home-page .logo h1{
+.home-page .logo a{
     font-size: 35px;
     font-family: cursive;
     color: white;
