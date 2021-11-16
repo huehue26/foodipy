@@ -67,8 +67,20 @@
         <a href="#">
           <p class="sub-headings">Contact</p>
         </a>
-        <button id="login-button">Log In</button>
-        <button id="signup-button">Sign Up</button>
+        <a href="#Follow_">
+          <p class="sub-headings">Follow Us</p>
+        </a>
+
+        <div class="dropdown sub-headings">
+          <button  class="dropbtn"><i onclick="myFunction()" class="dropbtn fas fa-id-badge"></i></button>
+          <div id="myDropdown" class="dropdown-content">
+            <button id="login-button">Log In</button>
+            <button id="signup-button">Sign Up</button>
+            <a href="./profile.html">
+              <p class="sub-headings">Profile</p>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="content">
@@ -341,7 +353,7 @@
         </div>
       </div>
       <div class="connection-icons">
-        <div class="icons-footer icons-footer-1">Connect with Us</div>
+        <div class="icons-footer icons-footer-1" id="Follow_">Connect with Us</div>
         <div class="icons-footer"><i class="fab fa-twitter-square"></i> &nbsp; &nbsp; Follow Us on Twitter</div>
         <div class="icons-footer"><i class="fab fa-facebook-square"></i>&nbsp; &nbsp; Like Us on Facebook</div>
         <div class="icons-footer"><i class="fab fa-instagram-square"></i>&nbsp; &nbsp; Follow Us on &nbsp;
@@ -384,6 +396,24 @@
       });
     }
   </script>
+
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
   <script src="./js/api.js"></script>
   <script src="./js/logic.js"></script>
   <script src="./js/order_form.js"></script>

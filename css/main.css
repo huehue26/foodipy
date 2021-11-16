@@ -256,6 +256,63 @@ body {
     background-color: white;
 }
 
+.headings .dropbtn {
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .headings .dropbtn:hover,
+  .headings .dropbtn:focus {
+    color: #e79544 ;
+  }
+
+  .headings .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .headings .dropbtn i {
+    margin-left: 9px;
+  }
+
+  .headings .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(5, 4, 4, 0.5);
+    z-index: 1;
+  }
+
+  .headings .dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .headings .dropdown-content button {
+    padding: 10px;
+  }
+  .headings #login-button:hover,.headings #signup-button:hover {
+    padding: 10px;
+    background-color:rgba(0, 0, 0, 0.6) ;
+  }
+
+  .headings .dropdown-content a:hover {
+    background-color:rgba(0, 0, 0, 0.6) ;
+    color: #e79544;
+  }
+
+  .headings .show {
+    display: block;
+  }
+
 
 /* login box */
 
