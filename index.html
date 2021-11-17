@@ -17,11 +17,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Pacifico&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css"
     integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
@@ -72,7 +70,7 @@
         </a>
 
         <div class="dropdown sub-headings">
-          <button  class="dropbtn"><i onclick="myFunction()" class="dropbtn fas fa-user-alt fa-sm"></i></button>
+          <button class="dropbtn"><i onclick="myFunction()" class="dropbtn fas fa-user-alt fa-sm"></i></button>
           <div id="myDropdown" class="dropdown-content">
             <button id="login-button">Log In</button>
             <button id="signup-button">Sign Up</button>
@@ -196,8 +194,8 @@
     <div class="container">
       <div class="container1">
         <div class="front">
-          <img src="img/m-personnel-1.png" />
-          <div class="front-side">PARUL</div>
+          <img src="./img/m-personnel-1.png" />
+          <div class="front-side">Parul</div>
         </div>
         <div class="back">
           <h2>Parul</h2>
@@ -216,8 +214,8 @@
       </div>
       <div class="container1">
         <div class="front">
-          <img src="img/m-personnel-2.png" />
-          <div class="front-side">SAHIB</div>
+          <img src="./img/m-personnel-2.png" />
+          <div class="front-side">Sahib</div>
         </div>
 
         <div class="back">
@@ -236,8 +234,8 @@
       </div>
       <div class="container1">
         <div class="front">
-          <img src="img/m-personnel-3.png" />
-          <div class="front-side">SOMESH</div>
+          <img src="./img/m-personnel-3.png" />
+          <div class="front-side">Somesh</div>
         </div>
         <div class="back">
           <h2>Somesh Singh</h2>
@@ -255,8 +253,8 @@
       </div>
       <div class="container1">
         <div class="front">
-          <img src="img/m-personnel-4.png" />
-          <div class="front-side">SHUBHAM</div>
+          <img src="./img/m-personnel-4.png" />
+          <div class="front-side">Shubham</div>
         </div>
         <div class="back">
           <h2>Shubham Jha</h2>
@@ -354,12 +352,10 @@
       </div>
       <div class="connection-icons">
         <div class="icons-footer icons-footer-1" id="Follow_">Connect with Us</div>
-        <div class="icons-footer"><i class="fab fa-twitter-square"></i> &nbsp; &nbsp; Follow Us on Twitter</div>
-        <div class="icons-footer"><i class="fab fa-facebook-square"></i>&nbsp; &nbsp; Like Us on Facebook</div>
-        <div class="icons-footer"><i class="fab fa-instagram-square"></i>&nbsp; &nbsp; Follow Us on &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Instagram</div>
-        <div class="icons-footer"><i class="fab fa-youtube-square"></i> &nbsp; &nbsp;Subscribe Us on &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; YouTube</div>
+        <div class="icons-footer"><i class="fab fa-twitter"></i> &nbsp; Follow Us on Twitter</div>
+        <div class="icons-footer"><i class="fab fa-facebook"></i>&nbsp; Like Us on Facebook</div>
+        <div class="icons-footer"><i class="fab fa-instagram"></i>&nbsp; Follow Us on Instagram</div>
+        <div class="icons-footer"><i class="fab fa-youtube"></i>&nbsp;Subscribe Us on YouTube</div>
       </div>
       <div class="contact-info-footer">
         <div class="connect-icons-footer"><i class="fa-solid fa-house-blank"></i> <a class="quick-link-a"
@@ -397,23 +393,23 @@
     }
   </script>
 
-<script>
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
         }
       }
     }
-  }
-</script>
+  </script>
   <script src="./js/api.js"></script>
   <script src="./js/logic.js"></script>
   <script src="./js/order_form.js"></script>

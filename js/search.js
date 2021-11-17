@@ -1,3 +1,4 @@
+// saving data of the input in search
 document.getElementById("search-submit").addEventListener('click', () => {
     document.getElementById('content').innerHTML = "";
     let search_data = document.getElementById("search-input").value;
@@ -10,16 +11,24 @@ document.getElementById('search-input').addEventListener('keypress', function (e
         document.getElementById('content').innerHTML = "";
         let search_data = document.getElementById("search-input").value;
         sessionStorage.setItem('search_input', search_data);
-        console.log(search_data);
         print_data()
     }
 });
+
+// displaying filter on button click
+document.getElementById("filter-button").addEventListener("click", () => {
+    var x = document.getElementById("filter-container")
+    if (x.style.display === "block") {
+        x.style.display = "none"
+    } else {
+        x.style.display = "block"
+    }
+})
 
 print_data()
 
 function print_data() {
     const food_search = sessionStorage.getItem('search_input')
-    console.log(food_search);
 
     // by food name
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${food_search}`)
@@ -189,7 +198,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`)
                 `
                 <h1>
                     <input id="${element.strArea}" type="checkbox" class="filter-input" />
-                    <p>${element.strArea}</p>
+                    <p class="filter-data">${element.strArea}</p>
                 </h1>
         `
         });
@@ -204,9 +213,20 @@ fetch(`https://www.themealdb.com/api/json/v1/1/list.php?c=list`)
                 `
                 <h1>
                     <input id="${element.strCategory}" type="checkbox" class="filter-input" />
-                    <p>${element.strCategory}</p>
+                    <p class="filter-data">${element.strCategory}</p>
                 </h1>
         `
+        });
+        // checking checkbox on click on name of the category
+        $(".filter-data").click(function (e) {
+            var x = e.target.previousElementSibling
+            if (x.checked === false) {
+                console.log(x.checked)
+                x.checked = true
+            } else {
+                x.checked = false
+            }
+            console.log(x.checked)
         });
     })
 

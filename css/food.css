@@ -1025,6 +1025,9 @@ input:focus {
     margin-top: 15px;
     margin-bottom: 15px;
     flex-basis: 90%;
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(218, 216, 216);
 }
 
 .parent-footer{
@@ -1087,8 +1090,9 @@ input:focus {
 }
 
 .icons-footer-1{
-    color: white;
+    color: rgb(218, 216, 216);
     font-weight: 700;
+    font-size: 23px;
 }
 
 .line-end{
