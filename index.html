@@ -69,6 +69,17 @@
           <p class="sub-headings">Follow Us</p>
         </a>
 
+
+        <ul id="color-picker">
+          <li><a href="#">Color-Picker</a>
+            <ul class="dropdown_clr">
+              <li id="clr1"><a href="#">color1</a></li>
+              <li id="clr2"><a href="#">color2</a></li>
+              <li id="clr3"><a href="#">color3</a></li>
+            </ul>
+          </li>
+        </ul>
+
         <div class="dropdown sub-headings">
           <button class="dropbtn"><i onclick="myFunction()" class="dropbtn fas fa-user-alt fa-sm"></i></button>
           <div id="myDropdown" class="dropdown-content">
@@ -79,6 +90,8 @@
             </a>
           </div>
         </div>
+
+
       </div>
     </div>
     <div class="content">
@@ -409,6 +422,31 @@
         }
       }
     }
+
+    document.getElementById('color-picker').addEventListener('click', () => {
+      document.getElementById('clr1').addEventListener('click', function () {
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'rgb(20 20 18 / 86%)'
+        document.getElementsByTagName('body')[0].style.color = 'white';
+        document.getElementsByClassName('S-name')[0].style.color = 'white';
+        let x = document.getElementsByClassName('back');
+        for (let i = 0; i < x.length; x++) {
+          x[i].style.color = 'white';
+        }
+
+      })
+      document.getElementById('clr2').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'rgb(241 136 136)';
+      })
+      document.getElementById('clr3').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'rgb(51 0 227 / 52%)';
+      })
+      document.getElementById('clr4').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'rgb(229 146 0 / 61%)';
+      })
+    })
   </script>
   <script src="./js/api.js"></script>
   <script src="./js/logic.js"></script>
