@@ -95,9 +95,18 @@ fetch(`https://www.themealdb.com/api/json/v1/1/list.php?c=list`)
 
 document.getElementById('pay-now').addEventListener('click', function () {
     document.getElementById('paynow').style.display = 'flex';
+    document.body.style.overflow = "hidden"
+    $(window).scrollTop(1793)
 });
 document.getElementById('close-pay-now').addEventListener('click', function () {
     document.getElementById('paynow').style.display = 'none';
+    document.body.style.overflow = "auto"
+});
+
+// going to paynow after clicking
+$(window).on("scroll load resize", () => {
+    var x = $(window).scrollTop()
+    console.log(x)
 });
 
 // CART logic
