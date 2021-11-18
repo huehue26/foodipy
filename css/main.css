@@ -145,7 +145,7 @@ body {
 }
 
 .home-page .nav-bar .logo {
-    font-family: cursive;
+    font-family: serif;
     margin-left: 200px;
     margin-right: 200px;
     font-size: 40px;
@@ -861,3 +861,78 @@ body {
 .quick-link-a {
     color: #928989;
 }
+
+
+
+.nav-bar .headings a {
+    text-decoration: none;
+  }
+
+  .nav-bar .headings nav {
+    font-family: monospace;
+  }
+
+  .nav-bar .heading sul {
+    background: transparent;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .nav-bar .headings li {
+    color: #fff;
+    background: transparent;
+    display: block;
+    float: left;
+    /* padding: 1rem; */
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+
+  .nav-bar .headingsli a {
+    color: #fff;
+  }
+
+  .nav-bar .headingsli:hover,
+  .nav-bar .headingsli:focus-within {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .nav-bar .headingsli:focus-within a {
+    outline: none;
+  }
+
+  .nav-bar .headings ul li ul {
+    background: transparent;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+  }
+
+  .nav-bar .headings ul li:hover>ul,
+  .nav-bar .headings ul li:focus-within>ul,
+  .nav-bar .headings ul li ul:hover,
+  .nav-bar .headings ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block
+  }
+
+  .nav-bar .headings ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+  #clr2:hover{
+    color: rgb(241 136 136);
+  }
+
+  #color-picker{
+      margin-right: 40px;
+  }
