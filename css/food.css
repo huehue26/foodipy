@@ -23,10 +23,11 @@
 }
 
 .home-page .logo h1{
-    font-size: 45px;
-    font-family: serif;
+    font-size: 40px;
+    font-family: cursive;
     color: white;
     padding-left: 10%;
+    margin-top: 20px;
 }
 
 .home-page .nav-bar{
@@ -37,12 +38,13 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     column-gap: 7%;
+    margin-top: 20px;
 }
 
 .home-page .nav-bar .sub-headings a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-size: 20px;
     z-index: 99;
 }
 
@@ -62,7 +64,7 @@
     color: white;
     font-size: 19px;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -1014,7 +1016,7 @@ input:focus {
     margin-top: 50px;
 }
 
-.footer-cont{
+.footer-cont {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1023,13 +1025,16 @@ input:focus {
     color: #908F8F;
 }
 
-.footer-about{
+.footer-about {
     margin-top: 15px;
     margin-bottom: 15px;
     flex-basis: 90%;
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(218, 216, 216);
 }
 
-.parent-footer{
+.parent-footer {
     flex-basis: 80%;
     display: flex;
     align-items: center;
@@ -1037,7 +1042,7 @@ input:focus {
     flex-wrap: wrap;
 }
 
-.footer-heading{
+.footer-heading {
     flex-basis: 80%;
     font-size: 50px;
     font-weight: 800;
@@ -1047,20 +1052,20 @@ input:focus {
     color: white;
 }
 
-.about-comp{
+.about-comp {
     flex-basis: 45%;
     display: flex;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.about-comp .about{
+.about-comp .about {
     flex-basis: 80%;
     align-self: flex-start;
 }
 
-.connection-icons{
+.connection-icons {
     margin-top: 25px;
     flex-basis: 28%;
     display: flex;
@@ -1070,11 +1075,11 @@ input:focus {
     flex-wrap: wrap;
 }
 
-.connection-icons .icons-footer{
+.connection-icons .icons-footer {
     flex-basis: 80%;
 }
 
-.contact-info-footer{
+.contact-info-footer {
     margin-top: 25px;
     flex-basis: 25%;
     display: flex;
@@ -1084,27 +1089,28 @@ input:focus {
     row-gap: 20px;
 }
 
-.contact-info-footer .connect-icons-footer{
+.contact-info-footer .connect-icons-footer {
     flex-basis: 80%;
 }
 
-.icons-footer-1{
-    color: white;
+.icons-footer-1 {
+    color: rgb(218, 216, 216);
     font-weight: 700;
+    font-size: 23px;
 }
 
-.line-end{
+.line-end {
     flex-basis: 95%;
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
-.line-end hr{
+.line-end hr {
     height: 3px;
     background-color: #34a0fd;
 }
 
-.icons-footer i{
+.icons-footer i {
     color: white;
 }
 
@@ -1112,15 +1118,15 @@ input:focus {
     color: white;
 } */
 
-.end-footer{
+.end-footer {
     margin-bottom: 30px;
 }
 
-#nsutian-footer{
+#nsutian-footer {
     color: red;
     font-weight: 600;
 }
 
-.quick-link-a{
+.quick-link-a {
     color: #928989;
 }

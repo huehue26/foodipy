@@ -425,9 +425,9 @@
 
     document.getElementById('color-picker').addEventListener('click', () => {
       document.getElementById('clr1').addEventListener('click', function () {
-        document.getElementsByTagName('body')[0].style.backgroundColor = 'rgb(20 20 18 / 86%)'
-        document.getElementsByTagName('body')[0].style.color = 'white';
-        document.getElementsByClassName('S-name')[0].style.color = 'white';
+        document.getElementsByTagName('body')[0].style.backgroundColor = ' #6f6f6f '
+        document.getElementsByTagName('body')[0].style.color = ' #f9f6f6 ';
+        document.getElementsByClassName('S-name')[0].style.color = ' #f9f6f6 ';
         let x = document.getElementsByClassName('back');
         for (let i = 0; i < x.length; x++) {
           x[i].style.color = 'white';
@@ -436,11 +436,11 @@
       })
       document.getElementById('clr2').addEventListener('click', function (e) {
         e.preventDefault();
-        document.getElementsByTagName('body')[0].style.backgroundColor = 'rgb(241 136 136)';
+        document.getElementsByTagName('body')[0].style.backgroundColor = ' #8c8a8a ';
       })
       document.getElementById('clr3').addEventListener('click', function (e) {
         e.preventDefault();
-        document.getElementsByTagName('body')[0].style.backgroundColor = 'rgb(51 0 227 / 52%)';
+        document.getElementsByTagName('body')[0].style.backgroundColor = ' #ecbfb5 ';
       })
       document.getElementById('clr4').addEventListener('click', function (e) {
         e.preventDefault();
