@@ -5,10 +5,12 @@
 }
 
 body {
+    /* background-color: rgb(238, 234, 227); */
     background-color: rgb(238, 234, 227);
 }
 
 a {
+    /* text-decoration: none; */
     text-decoration: none;
 }
 
