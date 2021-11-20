@@ -10,10 +10,12 @@ body {
     justify-content: center;
     flex-wrap: wrap;
 }
-.col-md-8{
+
+.col-md-8 {
     flex-basis: 60%;
     margin-top: 50px;
 }
+
 .card-img-top {
     height: 300px
 }
@@ -103,11 +105,11 @@ p {
     margin-bottom: 1rem
 }
 
-.navbar-outermost{
+.navbar-outermost {
     background-color: rgba(7, 6, 6, 1);
 }
 
-.home-page{
+.home-page {
     z-index: 3;
     display: flex;
     align-items: center;
@@ -116,12 +118,12 @@ p {
     column-gap: auto;
 }
 
-.home-page .logo{
+.home-page .logo {
     flex-basis: 15%;
     position: relative;
 }
 
-.home-page .logo a{
+.home-page .logo a {
     font-size: 35px;
     font-family: cursive;
     color: white;
@@ -129,7 +131,7 @@ p {
     text-decoration: none;
 }
 
-.home-page .nav-bar{
+.home-page .nav-bar {
     flex-basis: 75%;
     position: relative;
     display: flex;
@@ -150,11 +152,11 @@ p {
     margin-top: 10px;
 }
 
-#cont-p{
+#cont-p {
     margin-top: 10px;
 }
 
-.home-page .nav-bar .sub-headings .search-bar-input{
+.home-page .nav-bar .sub-headings .search-bar-input {
     background-color: transparent;
     border: none;
     text-decoration: none;
@@ -172,12 +174,12 @@ p {
     padding-right: 50px;
 }
 
-.search-submit{
+.search-submit {
     background-color: transparent;
     color: white;
 }
 
-.footer-cont{
+.footer-cont {
     margin-top: 90px;
     display: flex;
     align-items: center;
@@ -187,7 +189,7 @@ p {
     color: #908F8F;
 }
 
-.footer-about{
+.footer-about {
     margin-top: 15px;
     margin-bottom: 15px;
     flex-basis: 90%;
@@ -196,7 +198,7 @@ p {
     color: rgb(218, 216, 216);
 }
 
-.parent-footer{
+.parent-footer {
     flex-basis: 80%;
     display: flex;
     align-items: center;
@@ -204,7 +206,7 @@ p {
     flex-wrap: wrap;
 }
 
-.footer-heading{
+.footer-heading {
     flex-basis: 80%;
     font-size: 50px;
     font-weight: 800;
@@ -214,20 +216,20 @@ p {
     color: white;
 }
 
-.about-comp{
+.about-comp {
     flex-basis: 45%;
     display: flex;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.about-comp .about{
+.about-comp .about {
     flex-basis: 80%;
     align-self: flex-start;
 }
 
-.connection-icons{
+.connection-icons {
     margin-top: 25px;
     flex-basis: 28%;
     display: flex;
@@ -237,11 +239,11 @@ p {
     flex-wrap: wrap;
 }
 
-.connection-icons .icons-footer{
+.connection-icons .icons-footer {
     flex-basis: 80%;
 }
 
-.contact-info-footer{
+.contact-info-footer {
     margin-top: 25px;
     flex-basis: 25%;
     display: flex;
@@ -251,44 +253,44 @@ p {
     row-gap: 20px;
 }
 
-.contact-info-footer .connect-icons-footer{
+.contact-info-footer .connect-icons-footer {
     flex-basis: 80%;
 }
 
-.icons-footer-1{
+.icons-footer-1 {
     color: rgb(218, 216, 216);
     font-weight: 700;
     font-size: 23px;
 }
 
-.line-end{
+.line-end {
     flex-basis: 95%;
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
-.line-end hr{
+.line-end hr {
     height: 3px;
     background-color: #34a0fd;
 }
 
-.icons-footer i{
+.icons-footer i {
     color: white;
 }
 
-.connect-icons-footer a{
+.connect-icons-footer a {
     color: white;
 }
 
-.end-footer{
+.end-footer {
     margin-bottom: 30px;
 }
 
-#nsutian-footer{
+#nsutian-footer {
     color: red;
     font-weight: 600;
 }
 
-.quick-link-a{
+.quick-link-a {
     color: #928989;
 }

@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f3f5f7;
+    background-color: rgb(247, 234, 234);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -16,6 +16,10 @@ body {
     width: 100%;
     overflow: hidden;
     top: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -150,6 +154,7 @@ body {
     margin-right: 150px;
     font-size: 40px;
     color: white;
+    text-decoration: none;
 }
 
 .home-page .nav-bar .headings {
@@ -161,6 +166,7 @@ body {
 .home-page .nav-bar .headings a {
     text-decoration: none;
     color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .home-page .nav-bar .headings a:hover {
@@ -235,6 +241,7 @@ body {
     z-index: 3;
     align-items: center;
     justify-content: center;
+    font-family: cursive;
 }
 
 .home-page .content p {
@@ -824,6 +831,14 @@ body {
     flex-basis: 80%;
 }
 
+.contact-info-footer a {
+    text-decoration: none;
+}
+
+.contact-info-footer a:hover {
+    color: #bb7c06;
+}
+
 .icons-footer-1 {
     color: rgb(218, 216, 216);
     font-weight: 700;
@@ -866,20 +881,20 @@ body {
 
 .nav-bar .headings a {
     text-decoration: none;
-  }
+}
 
-  .nav-bar .headings nav {
+.nav-bar .headings nav {
     font-family: monospace;
-  }
+}
 
-  .nav-bar .heading sul {
+.nav-bar .heading sul {
     background: transparent;
     list-style: none;
     margin: 0;
     padding-left: 0;
-  }
+}
 
-  .nav-bar .headings li {
+.nav-bar .headings li {
     color: #fff;
     background: transparent;
     display: block;
@@ -888,23 +903,23 @@ body {
     position: relative;
     text-decoration: none;
     transition-duration: 0.5s;
-  }
+}
 
-  .nav-bar .headingsli a {
+.nav-bar .headingsli a {
     color: #fff;
-  }
+}
 
-  .nav-bar .headingsli:hover,
-  .nav-bar .headingsli:focus-within {
+.nav-bar .headingsli:hover,
+.nav-bar .headingsli:focus-within {
     background: transparent;
     cursor: pointer;
-  }
+}
 
-  .nav-bar .headingsli:focus-within a {
+.nav-bar .headingsli:focus-within a {
     outline: none;
-  }
+}
 
-  .nav-bar .headings ul li ul {
+.nav-bar .headings ul li ul {
     background: transparent;
     visibility: hidden;
     opacity: 0;
@@ -914,25 +929,27 @@ body {
     margin-top: 1rem;
     left: 0;
     display: none;
-  }
+}
 
-  .nav-bar .headings ul li:hover>ul,
-  .nav-bar .headings ul li:focus-within>ul,
-  .nav-bar .headings ul li ul:hover,
-  .nav-bar .headings ul li ul:focus {
+.nav-bar .headings ul li:hover>ul,
+.nav-bar .headings ul li:focus-within>ul,
+.nav-bar .headings ul li ul:hover,
+.nav-bar .headings ul li ul:focus {
     visibility: visible;
     opacity: 1;
     display: block
-  }
+}
 
-  .nav-bar .headings ul li ul li {
+.nav-bar .headings ul li ul li {
     clear: both;
     width: 100%;
-  }
-  #clr2:hover{
-    color: rgb(241 136 136);
-  }
+}
 
-  #color-picker{
-      margin-right: 40px;
-  }
+#clr2:hover {
+    color: rgb(241 136 136);
+}
+
+#color-picker {
+    left: 0;
+    margin-right: 20px;
+}
