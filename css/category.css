@@ -9,6 +9,44 @@ body {
     background-color: rgb(238, 234, 227);
 }
 
+/* scrollbar customize */
+::-webkit-scrollbar
+{
+    width: 8px;
+    height: 10px
+}
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(180deg ,red ,yellow);
+    border-radius: 10px;
+}
+
+/* carousel css */
+.carousel
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+}
+.carousel_container
+{
+    height: 700px;
+    width: 1230px;
+}
+.coursel_buttons
+{
+    border:  4px solid black;
+}
+
+.carousel_images_container
+{
+    height: 700px;
+    width: 1224px;
+}
+.carousel-item img{
+    height: 700px;
+}
 a {
     /* text-decoration: none; */
     text-decoration: none;
