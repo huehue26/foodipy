@@ -64,30 +64,39 @@
                         </div>
                     </div>
                     <p id="signup-error"></p>
-                    <div id="div-name-input">
-                        <input id="name-input" type="text" class="input" placeholder="Full Name">
-                    </div>
-                    <div id="div-email-input">
-                        <input id="email-input" type="text" class="input" placeholder="Email">
-                    </div>
-                    <div class="check-box">
-                        <input type="checkbox" id="checkbox">
-                        <span class="check-box-message">I agree to Bakify's Terms of Service, Privacy Policy and
-                            Content
-                            Policies</span>
-                    </div>
-                    <div>
-                        <button id="submit-signup">Create Account</button>
-                    </div>
-                    <div style="font-size: 20px;">
-                        or
-                    </div>
-                    <div>
-                        <button class="google"><i class="fab fa-google"></i>&emsp;Continue with Google</button>
-                    </div>
-                    <div class="have-acc">
-                        Already Have a Account ? <button id="login_account">Log In</button>
-                    </div>
+                    <form action="php/signup.php" method="post">
+                        <div id="div-name-input">
+                            <input id="name-input" type="text" class="input" name="user_name" placeholder="Full Name" />
+                        </div>
+                        <div id="div-email-input">
+                            <input id="email-input" type="text" class="input" name="user_email" placeholder="Email" />
+                        </div>
+                        <div id="div-phone-input">
+                            <input id="phone-input" type="text" class="input" name="user_phone" placeholder="Phone" />
+                        </div>
+                        <div id="div-street-address-input">
+                            <input id="street-address-input" type="text" class="input" name="user_address_street"
+                                placeholder="Street" />
+                        </div>
+                        <div id="div-city-address-input">
+                            <input id="street-address-input" type="text" class="input" name="user_address_city"
+                                placeholder="City" />
+                        </div>
+                        <div id="div-password-input">
+                            <input type="text" id="password-input" class="input" name="password"
+                                placeholder="Password" />
+                        </div>
+                        <div class="check-box">
+                            <input type="checkbox" id="checkbox" />
+                            <span class="check-box-message">I agree to Bakify's Terms of Service, Privacy Policy and
+                                Content
+                                Policies</span>
+                        </div>
+                        <div>
+                            <button id="submit-signup">Create Account</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
             <div id="login">
